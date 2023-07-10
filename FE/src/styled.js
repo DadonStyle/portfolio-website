@@ -61,6 +61,8 @@ const SectionHeaderWrapper = styled.div`
 
 const SectionBody = styled.div`
   display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
 `;
 
 const GlitchWrapper = styled.div`
