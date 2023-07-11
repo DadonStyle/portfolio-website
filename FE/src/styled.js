@@ -1,17 +1,12 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
-const ScrollBg = styled.div`
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  z-index: -100;
-`;
-
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  position: relative;
+  overflow: hidden;
 `;
 
 const Header = styled.div`
@@ -70,14 +65,44 @@ const GlitchWrapper = styled.div`
   gap: 30px;
 `;
 
+const raise = keyframes`
+  0% {
+    top: -10%;
+    transform: rotate(0); 
+    right: 10%;
+  }
+  50% {
+    top: 110%;
+    transform: rotate(60deg); 
+    right: 70%
+  }
+  100% {
+    top: -10%;
+    right: 30%;
+    transform: rotate(90deg); 
+  }
+`;
+
+const FloatContainer = styled.div`
+  svg {
+    position: absolute;
+    min-height: 40px;
+    min-width: 60px;
+    z-index: -999;
+    animation: ${raise} 10.2s ease-in-out infinite;
+    filter: 60px;
+    overflow: hidden;
+  }
+`;
+
 const S = {
   MainContainer,
-  ScrollBg,
   Header,
   Footer,
   Section,
   SectionHeaderWrapper,
   SectionBody,
   GlitchWrapper,
+  FloatContainer,
 };
 export default S;

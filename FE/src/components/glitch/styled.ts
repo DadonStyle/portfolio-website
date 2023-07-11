@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
 const glitch = keyframes`
@@ -36,7 +35,14 @@ const GlitchContainer = styled.div`
   align-items: center;
 `;
 
-const StyledGlitch = styled.span`
+interface IStyledGlitch {
+  active: boolean;
+  hover: boolean;
+  text: string;
+  randomColor: string;
+}
+
+const StyledGlitch = styled.span<IStyledGlitch>`
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
   font-size: 4rem;
@@ -63,14 +69,10 @@ const StyledGlitch = styled.span`
   }
 
   ${({ active }) => (active ? animationHover : '')}
-  ${({ hover }) =>
-    hover &&
-    css`
-      cursor: pointer;
-      :hover {
-        ${animationHover}
-        color: ${({ randomColor }) => randomColor ?? 'red'}
-    `}
+  :hover {
+    ${animationHover}
+    color: ${({ randomColor }) => randomColor ?? 'red'}
+  }
 `;
 
 const S = {
