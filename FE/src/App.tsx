@@ -4,6 +4,7 @@ import S from './styled';
 import NavBar from './components/navBar/NavBar';
 import { ReactComponent as Float2 } from './assets/float2.svg';
 import { ReactComponent as Float3 } from './assets/float8.svg';
+import FlipCard from './components/flipCard/FlipCard';
 
 import AnimatedCursor from 'react-animated-cursor';
 import JumpingContainer from './components/jumpingLettersText/JumpingContainer';
@@ -71,6 +72,7 @@ const App = () => {
         </S.SectionHeaderWrapper>
         <S.SectionBody>
           <Details />
+          <FlipCard />
         </S.SectionBody>
       </S.Section>
       <S.Footer>Footer</S.Footer>
