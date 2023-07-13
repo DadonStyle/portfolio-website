@@ -8,20 +8,12 @@ export interface IJumpingLettersTextProps {
 const JumpingLettersText = (
   props: PropsWithChildren<IJumpingLettersTextProps>
 ) => {
-  let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-
   return (
-    <S.JumpContainer>
-      {props.text
-        .split('')
-        .map((item) =>
-          item === ' ' ? (
-            <S.Space key={Math.random()} />
-          ) : (
-            <S.JumpLetter key={Math.random()}>{item}</S.JumpLetter>
-          )
-        )}
-    </S.JumpContainer>
+    <S.JumpRowContainer>
+      {props.text.split(' ').map((item) => (
+        <S.JumpWord key={Math.random()}>{item}</S.JumpWord>
+      ))}
+    </S.JumpRowContainer>
   );
 };
 

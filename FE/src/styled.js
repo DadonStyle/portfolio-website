@@ -1,12 +1,61 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
+const Grain = keyframes`
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%);
+  }
+  70% {
+    transform: translateY(15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+`;
+
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  z-index: -5;
+  background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
+  background-size: 200px;
+  &:after {
+    animation: ${Grain} 8s steps(10) infinite; // https://itssharl.ee/fr https://css-tricks.com/snippets/css/animated-grainy-texture/
+    background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
+    content: '';
+    z-index: -4;
+    height: 300%;
+    width: 300%;
+    position: fixed;
+    left: -50%;
+    top: -110%;
+    opacity: 0.3;
+  }
 `;
 
 const Header = styled.div`
@@ -44,20 +93,12 @@ const Section = styled.section`
   height: 100vh;
 `;
 
-const SectionHeaderWrapper = styled.div`
-  animation: ${Sweep} 1.2s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  flex-direction: column;
-  width: 100%;
-`;
-
 const SectionBody = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 4rem;
+  padding: 0 1rem;
+  justify-content: center;
+  align-items: center;
 `;
 
 const GlitchWrapper = styled.div`
@@ -65,44 +106,12 @@ const GlitchWrapper = styled.div`
   gap: 30px;
 `;
 
-const raise = keyframes`
-  0% {
-    top: -10%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 110%;
-    transform: rotate(60deg); 
-    right: 70%
-  }
-  100% {
-    top: -10%;
-    right: 30%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const FloatContainer = styled.div`
-  svg {
-    position: absolute;
-    min-height: 40px;
-    min-width: 60px;
-    z-index: -999;
-    animation: ${raise} 10.2s ease-in-out infinite;
-    filter: 60px;
-    overflow: hidden;
-  }
-`;
-
 const S = {
   MainContainer,
   Header,
   Footer,
   Section,
-  SectionHeaderWrapper,
   SectionBody,
   GlitchWrapper,
-  FloatContainer,
 };
 export default S;

@@ -30,12 +30,10 @@ const CloseAnimation = css`
 
 const DetailsWrapper = styled.div`
   display: flex;
-  width: 100%;
 `;
 
 const Details = styled.details`
   ${({ open }) => (open ? OpenAnimation : CloseAnimation)}
-  width: 100%;
   ${DetailsAnimation}
 `;
 

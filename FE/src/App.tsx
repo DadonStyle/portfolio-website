@@ -1,82 +1,68 @@
-import Glitch from './components/glitch/Glitch';
-import Details from './components/details/Details';
+import Glitch from './components/Glitch/Glitch';
+import Details from './components/Details/Details';
 import S from './styled';
-import NavBar from './components/navBar/NavBar';
-import { ReactComponent as Float2 } from './assets/float2.svg';
-import { ReactComponent as Float3 } from './assets/float8.svg';
-import FlipCard from './components/flipCard/FlipCard';
+import NavBar from './components/NavBar/NavBar';
+import FlipCard from './components/FlipCard/FlipCard';
 
-import AnimatedCursor from 'react-animated-cursor';
-import JumpingContainer from './components/jumpingLettersText/JumpingContainer';
+import JumpingContainer from './components/JumpingLettersText/JumpingContainer';
+import useAnimatedCursor from './hooks/useAnimatedCursor';
+import Background from './components/Background/Background';
 
 const App = () => {
+  const cursor = useAnimatedCursor();
   // https://codepen.io/RSH87/pen/gMdJKQ source for background
   return (
-    <S.MainContainer>
-      <S.FloatContainer>
-        <Float2 />
-      </S.FloatContainer>
-      <AnimatedCursor
-        innerSize={15}
-        outerSize={15}
-        color="255,255,225"
-        outerAlpha={0.2}
-        innerScale={0}
-        outerScale={5}
-        clickables={['span']}
-      />
-      <S.Header>
-        <div>Logo</div>
-        <NavBar links="string" />
-        <div>menu</div>
-      </S.Header>
+    <>
+      <S.MainContainer>
+        {cursor}
+        <Background />
+        <S.Header>
+          <div>Logo</div>
+          <NavBar links="string" />
+          <div>menu</div>
+        </S.Header>
 
-      <S.Section>
-        <S.SectionHeaderWrapper>
-          <S.GlitchWrapper>
-            {'Hey, I am Noam'.split(' ').map((item) => (
-              <Glitch
-                key={Math.random()}
-                active={false}
-                hover={true}
-                text={item}
-              />
-            ))}
-          </S.GlitchWrapper>
-          <S.GlitchWrapper>
-            {'Frontend Developer'.split(' ').map((item) => (
-              <Glitch
-                key={Math.random()}
-                active={false}
-                hover={true}
-                text={item}
-              />
-            ))}
-          </S.GlitchWrapper>
-        </S.SectionHeaderWrapper>
-        <S.SectionBody>
-          <JumpingContainer />
-        </S.SectionBody>
-      </S.Section>
-      <S.Section>
-        <S.SectionHeaderWrapper>
+        <S.Section>
+          <S.SectionBody>
+            <S.GlitchWrapper>
+              {'Hey, I am Noam'.split(' ').map((item) => (
+                <Glitch
+                  key={Math.random()}
+                  active={false}
+                  hover={true}
+                  text={item}
+                />
+              ))}
+            </S.GlitchWrapper>
+            <S.GlitchWrapper>
+              {'Frontend Developer'.split(' ').map((item) => (
+                <Glitch
+                  key={Math.random()}
+                  active={false}
+                  hover={true}
+                  text={item}
+                />
+              ))}
+            </S.GlitchWrapper>
+            <JumpingContainer />
+          </S.SectionBody>
+        </S.Section>
+        <S.Section>
           <Glitch active={false} hover={true} text={'Experties'} />
-        </S.SectionHeaderWrapper>
-        <S.SectionBody>
-          <Details />
-        </S.SectionBody>
-      </S.Section>
-      <S.Section>
-        <S.SectionHeaderWrapper>
+          <S.SectionBody>
+            <Details />
+          </S.SectionBody>
+        </S.Section>
+        <S.Section>
           <Glitch active={false} hover={true} text={'Hey, I am Noam'} />
-        </S.SectionHeaderWrapper>
-        <S.SectionBody>
-          <Details />
-          <FlipCard />
-        </S.SectionBody>
-      </S.Section>
-      <S.Footer>Footer</S.Footer>
-    </S.MainContainer>
+          <S.SectionBody>
+            <Details />
+            <FlipCard />
+          </S.SectionBody>
+        </S.Section>
+        <S.Footer>Footer</S.Footer>
+      </S.MainContainer>
+    </>
   );
 };
 
