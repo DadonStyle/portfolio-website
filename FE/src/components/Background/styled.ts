@@ -160,7 +160,7 @@ const FloatContainer = styled.div`
 `;
 
 const AnimationWrapper = styled.svg<IAnimationWrapper>`
-  animation: ${({ floatAnimation }) => floatAnimation} 100s ease-in-out infinite;
+  animation: ${({ floatAnimation }) => floatAnimation} 25s ease-in-out infinite;
 `;
 
 const S = {

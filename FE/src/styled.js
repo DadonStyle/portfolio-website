@@ -40,15 +40,14 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  position: relative;
-  z-index: -5;
+  z-index: -9;
   background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
   background-size: 200px;
   &:after {
     animation: ${Grain} 8s steps(10) infinite; // https://itssharl.ee/fr https://css-tricks.com/snippets/css/animated-grainy-texture/
     background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
     content: '';
-    z-index: -4;
+    z-index: -10;
     height: 300%;
     width: 300%;
     position: fixed;
