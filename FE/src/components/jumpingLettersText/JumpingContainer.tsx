@@ -27,8 +27,8 @@ const JumpingContainer = () => (
     </p>
     <p>
       <JumpingLettersText text="When I’m not at the computer, " />
-      <JumpingLettersText text="I’m usually charging up my social battery, playing Ping-Pong " />
-      <JumpingLettersText text="or spending time with my loved ones. " />
+      <JumpingLettersText text="I’m usually charging up my social battery, playing Ping-Pong," />
+      <JumpingLettersText text="gaming, or spending time with my loved ones. " />
     </p>
   </S.ParagraphContainer>
 );
