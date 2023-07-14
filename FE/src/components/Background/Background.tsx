@@ -1,15 +1,18 @@
 import S from './styled';
-import { svgs, keyFrames } from './helper';
+import { svgs, generateFloat } from './helper';
+
+const randomId = (max: number) => Math.floor(Math.random() * max);
 
 const Background = () => (
   <>
+    <S.BackgroundImg />
     <S.FloatContainer>
-      {svgs.map((item, index) => (
+      {[...Array(14).keys()].map((item) => (
         <S.AnimationWrapper
           key={Math.random()}
-          floatAnimation={keyFrames[index]}
+          floatAnimation={generateFloat()}
         >
-          {item}
+          {svgs[item] ? svgs[item] : svgs[randomId(svgs?.length)]}
         </S.AnimationWrapper>
       ))}
     </S.FloatContainer>

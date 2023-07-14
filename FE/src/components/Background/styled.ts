@@ -1,171 +1,87 @@
-import styled, { keyframes, css } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 interface IAnimationWrapper {
   floatAnimation: any;
 }
 
-const float1 = keyframes`
-  0% {
-    top: -10%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 110%;
-    transform: rotate(60deg); 
-    right: 70%
-  }
-  100% {
-    top: -10%;
-    right: 30%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const float2 = keyframes`
-  0% {
-    top: 10%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: -110%;
-    transform: rotate(60deg); 
-    right: 70%
-  }
-  100% {
-    top: 10%;
-    right: 30%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const float3 = keyframes`
-  0% {
-    top: -5%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 30%;
-    transform: rotate(60deg); 
-    right: 40%
-  }
-  100% {
-    top: -10%;
-    right: 20%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const float4 = keyframes`
-  0% {
-    top: -5%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 30%;
-    transform: rotate(60deg); 
-    right: 40%
-  }
-  100% {
-    top: -10%;
-    right: 20%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const float5 = keyframes`
-  0% {
-    top: -5%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 30%;
-    transform: rotate(60deg); 
-    right: 40%
-  }
-  100% {
-    top: -10%;
-    right: 20%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const float6 = keyframes`
-  0% {
-    top: -5%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 30%;
-    transform: rotate(60deg); 
-    right: 40%
-  }
-  100% {
-    top: -10%;
-    right: 20%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const float7 = keyframes`
-  0% {
-    top: -5%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 30%;
-    transform: rotate(60deg); 
-    right: 40%
-  }
-  100% {
-    top: -10%;
-    right: 20%;
-    transform: rotate(90deg); 
-  }
-`;
-
-const float8 = keyframes`
-  0% {
-    top: -5%;
-    transform: rotate(0); 
-    right: 10%;
-  }
-  50% {
-    top: 30%;
-    transform: rotate(60deg); 
-    right: 40%
-  }
-  100% {
-    top: -10%;
-    right: 20%;
-    transform: rotate(90deg); 
-  }
-`;
-
 const FloatContainer = styled.div`
   svg {
     position: absolute;
-    min-height: 40px;
-    min-width: 60px;
+    max-height: 60px;
+    max-width: 60px;
     z-index: -3;
     filter: 60px;
-    overflow: hidden;
+    overflow: visible;
+  }
+`;
+
+const Grain = keyframes`
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%);
+  }
+  70% {
+    transform: translateY(15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
+`;
+
+const BackgroundImg = styled.div`
+  opacity: 0.4;
+  background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
+  background-size: 200px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -10;
+  &:after {
+    animation: ${Grain} 10s steps(20) infinite;
+    background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
+    content: '';
+    z-index: -10;
+    height: 300%;
+    width: 300%;
+    position: fixed;
+    left: -50%;
+    top: -110%;
+    opacity: 0.3;
   }
 `;
 
 const AnimationWrapper = styled.svg<IAnimationWrapper>`
-  animation: ${({ floatAnimation }) => floatAnimation} 25s ease-in-out infinite;
+  animation: ${({ floatAnimation }) => floatAnimation}
+    ${10 + Math.floor(Math.random() * 100) + 's'} ease-in-out infinite;
 `;
 
 const S = {
   FloatContainer,
   AnimationWrapper,
+  BackgroundImg,
 };
 
 export default S;
