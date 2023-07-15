@@ -7,7 +7,7 @@ const Background = () => (
   <>
     <S.BackgroundImg />
     <S.FloatContainer>
-      {[...Array(14).keys()].map((item) => (
+      {[...Array(56).keys()].map((item) => (
         <S.AnimationWrapper
           key={Math.random()}
           floatAnimation={generateFloat()}

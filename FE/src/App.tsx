@@ -1,12 +1,12 @@
 import Glitch from './components/Glitch/Glitch';
-import Details from './components/Details/Details';
 import S from './styled';
 import NavBar from './components/NavBar/NavBar';
-import FlipCard from './components/FlipCard/FlipCard';
-
 import JumpingContainer from './components/JumpingLettersText/JumpingContainer';
 import useAnimatedCursor from './hooks/useAnimatedCursor';
 import Background from './components/Background/Background';
+import ImageCard from './components/ImageCard/ImageCard';
+import { textsImgsArr, imgArr } from './AppHelper';
+import FLipCardContainer from './components/FlipCard/FLipCardContainer';
 
 const App = () => {
   const cursor = useAnimatedCursor();
@@ -48,16 +48,15 @@ const App = () => {
           </S.SectionBody>
         </S.Section>
         <S.Section>
-          <Glitch active={false} hover={true} text={'Experties'} />
+          <Glitch active={false} hover={true} text={'Projects'} />
           <S.SectionBody>
-            <Details />
+            <ImageCard textsImgsArr={textsImgsArr} />
           </S.SectionBody>
         </S.Section>
         <S.Section>
-          <Glitch active={false} hover={true} text={'Hey, I am Noam'} />
+          <Glitch active={false} hover={true} text={'Experties'} />
           <S.SectionBody>
-            <Details />
-            <FlipCard />
+            <FLipCardContainer imgArr={imgArr} />
           </S.SectionBody>
         </S.Section>
         <S.Footer>Footer</S.Footer>

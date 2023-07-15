@@ -75,7 +75,7 @@ const BackgroundImg = styled.div`
 
 const AnimationWrapper = styled.svg<IAnimationWrapper>`
   animation: ${({ floatAnimation }) => floatAnimation}
-    ${10 + Math.floor(Math.random() * 100) + 's'} ease-in-out infinite;
+    ${50 + Math.floor(Math.random() * 50) + 's'} ease-in-out infinite;
 `;
 
 const S = {
