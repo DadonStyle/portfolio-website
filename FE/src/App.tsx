@@ -7,6 +7,7 @@ import Background from './components/Background/Background';
 import ImageCard from './components/ImageCard/ImageCard';
 import { textsImgsArr, imgArr } from './AppHelper';
 import FLipCardContainer from './components/FlipCard/FLipCardContainer';
+import Form from './components/Form/Form';
 
 const App = () => {
   const cursor = useAnimatedCursor();
@@ -59,7 +60,9 @@ const App = () => {
             <FLipCardContainer imgArr={imgArr} />
           </S.SectionBody>
         </S.Section>
-        <S.Footer>Footer</S.Footer>
+        <S.Footer>
+          <Form />
+        </S.Footer>
       </S.MainContainer>
     </>
   );

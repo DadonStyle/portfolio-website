@@ -20,6 +20,7 @@ const Header = styled.div`
   align-items: center;
   overflow-x: hidden;
   position: fixed;
+  cursor: none;
 `;
 
 const Footer = styled.footer`

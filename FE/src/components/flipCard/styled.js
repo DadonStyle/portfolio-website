@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const FlipCardBigContainer = styled.div`
   display: flex;
+  gap: 2rem;
 `;
 
 const FlipCardWrapper = styled.div`
@@ -36,8 +37,11 @@ const FlipCardFront = styled.div`
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background-color: #bbb;
+  background-color: transparent;
   border-radius: 50%;
+  img {
+    border-radius: 2rem;
+  }
 `;
 
 const FlipCardBack = styled.div`
@@ -46,8 +50,12 @@ const FlipCardBack = styled.div`
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  background-color: transparent;
   transform: rotateY(180deg);
   border-radius: 50%;
+  img {
+    border-radius: 2rem;
+  }
 `;
 
 const S = {

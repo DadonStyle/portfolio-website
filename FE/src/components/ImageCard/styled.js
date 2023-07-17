@@ -18,6 +18,7 @@ const ImgContainer = styled.div`
     width: 500px;
     height: 500px;
     border-radius: 30px;
+    box-shadow: black 0 7px 20px 0;
   }
 `;
 
@@ -58,10 +59,12 @@ const TextInsideWrapper = styled.a`
   font-size: 20px;
   font-weight: 400;
   color: white;
+  cursor: none;
   :hover {
     transform: translateX(2rem);
     transition: 0.3s ease-in-out;
     color: rgba(255, 255, 255, 0.6);
+    cursor: none;
   }
 `;
 

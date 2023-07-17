@@ -1,8 +1,14 @@
 import extentionImg from './assets/img/vs-code-extensions.jpg';
 import chatImg from './assets/img/ChatApp.jpg';
 import ERC20Img from './assets/img/ERC20.jpg';
-import ShortenUrlImg from './assets/img/ShortenUrl.jpg';
-import CryptoTowerImg from './assets/img/CryptoTower.png';
+import shortenUrlImg from './assets/img/ShortenUrl.jpg';
+import cryptoTowerImg from './assets/img/CryptoTower.png';
+import reactImg from './assets/img/React.png';
+import nodeJsImg from './assets/img/nodejs.png';
+import cssImg from './assets/img/css3.png';
+import htmlImg from './assets/img/html5.png';
+import JsImg from './assets/img/js.png';
+import TsImg from './assets/img/ts.png';
 
 export const textsImgsArr = [
   {
@@ -27,14 +33,14 @@ export const textsImgsArr = [
     tech: 'JS, React, Web3',
   },
   {
-    img: ShortenUrlImg,
+    img: shortenUrlImg,
     name: 'Url Shortener',
     desc: 'Shorten your URL & count the amount of clicks per URL',
     link: 'https://github.com/DadonStyle/Url-Shortener',
     tech: 'Ts, React, Node, MongoDB',
   },
   {
-    img: CryptoTowerImg,
+    img: cryptoTowerImg,
     name: 'Crypto Tower FE',
     desc: 'Game, imitation of Crash',
     link: 'https://github.com/DadonStyle/Crypto-Tower-FE',
@@ -44,11 +50,15 @@ export const textsImgsArr = [
 
 export const imgArr = [
   {
-    frontImg: 'test',
-    backImg: 'react-style-component-helper',
+    frontImg: reactImg,
+    backImg: nodeJsImg,
   },
   {
-    frontImg: 'test',
-    backImg: 'Chat App',
+    frontImg: cssImg,
+    backImg: htmlImg,
+  },
+  {
+    frontImg: JsImg,
+    backImg: TsImg,
   },
 ];
