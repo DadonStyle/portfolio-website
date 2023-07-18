@@ -1,33 +1,41 @@
-import { useForm } from 'react-hook-form';
+import { FormEvent, useRef, useState } from 'react';
+import S from './styled';
 
 const Form = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data: any) => console.log(data);
+  const nameRef = useRef<HTMLInputElement>(null);
+  const subjectRef = useRef<HTMLInputElement>(null);
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
-  console.log(watch('example')); // watch input value by passing the name of it
+  const [name, setName] = useState<string | undefined>('');
+  const [subject, setSubject] = useState<string | undefined>('');
+  const [textArea, setTextArea] = useState<string | undefined>('');
+
+  const handleNameChange = () => setName(nameRef.current?.value);
+  const handleSubjectChange = () => setSubject(subjectRef.current?.value);
+  const handleTextAreaChange = () => setTextArea(textAreaRef.current?.value);
+
+  const getGreet = () => {
+    const date = new Date();
+    console.log(date.getHours);
+  };
+
+  getGreet(); // add good morning/mid day/evening/night to the body
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>Name</label>
-      <input defaultValue="name" {...register('example')} />
-      {errors.exampleRequired && <span>This field is required</span>}
+    <S.FormContainer>
+      <S.Form>
+        <S.label>Name</S.label>
+        <S.Input ref={nameRef} onChange={handleNameChange} defaultValue="name" />
 
-      <label>Email</label>
-      <input defaultValue="email" {...register('example')} />
-      {errors.exampleRequired && <span>This field is required</span>}
+        <S.label>Subject</S.label>
+        <S.Input ref={subjectRef} onChange={handleSubjectChange} defaultValue="email" />
 
-      <label>Message</label>
-      <textarea defaultValue="email" {...register('example')} />
-      {errors.exampleRequired && <span>This field is required</span>}
+        <S.label>Message</S.label>
+        <S.Textarea ref={textAreaRef} onChange={handleTextAreaChange} defaultValue="email" />
 
-      <input type="submit" />
-    </form>
+        <a href={`mailto:noamoni9@gmail.com?subject=${subject}&body=Hello It's ${name}, ${textArea}`}>Send Email</a>
+      </S.Form>
+    </S.FormContainer>
   );
 };
 
