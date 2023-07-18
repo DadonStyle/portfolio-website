@@ -24,16 +24,37 @@ const Form = () => {
   return (
     <S.FormContainer>
       <S.Form>
-        <S.label>Name</S.label>
-        <S.Input ref={nameRef} onChange={handleNameChange} defaultValue="name" />
-
-        <S.label>Subject</S.label>
-        <S.Input ref={subjectRef} onChange={handleSubjectChange} defaultValue="email" />
-
-        <S.label>Message</S.label>
-        <S.Textarea ref={textAreaRef} onChange={handleTextAreaChange} defaultValue="email" />
-
-        <a href={`mailto:noamoni9@gmail.com?subject=${subject}&body=Hello It's ${name}, ${textArea}`}>Send Email</a>
+        <S.NameContainer>
+          <S.label>Name</S.label>
+          <S.Input
+            ref={nameRef}
+            onChange={handleNameChange}
+            defaultValue="name"
+          />
+        </S.NameContainer>
+        <S.SubjectContainer>
+          <S.label>Subject</S.label>
+          <S.Input
+            ref={subjectRef}
+            onChange={handleSubjectChange}
+            defaultValue="email"
+          />
+        </S.SubjectContainer>
+        <S.MessageContainer>
+          <S.label>Message</S.label>
+          <S.Textarea
+            ref={textAreaRef}
+            onChange={handleTextAreaChange}
+            defaultValue="email"
+          />
+        </S.MessageContainer>
+        <S.LinkContainer>
+          <S.Link
+            href={`mailto:noamoni9@gmail.com?subject=${subject}&body=Hello It's ${name}, ${textArea}`}
+          >
+            Send Email
+          </S.Link>
+        </S.LinkContainer>
       </S.Form>
     </S.FormContainer>
   );
