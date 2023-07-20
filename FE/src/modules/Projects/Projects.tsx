@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <>
       <S.HeaderWrapper>
-        <Glitch active={false} hover={true} text={'Projects'} />
+        <Glitch text={'Projects'} />
       </S.HeaderWrapper>
       <S.BodyWrapper>
         <ImageCard textsImgsArr={textsImgsArr} />

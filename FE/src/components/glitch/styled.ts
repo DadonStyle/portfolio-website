@@ -36,8 +36,6 @@ const GlitchContainer = styled.div`
 `;
 
 interface IStyledGlitch {
-  active: boolean;
-  hover: boolean;
   text: string;
   randomColor: string;
 }
@@ -67,8 +65,6 @@ const StyledGlitch = styled.span<IStyledGlitch>`
   &:before {
     z-index: 2;
   }
-
-  ${({ active }) => (active ? animationHover : '')}
   :hover {
     ${animationHover}
     color: ${({ randomColor }) => randomColor ?? 'red'}

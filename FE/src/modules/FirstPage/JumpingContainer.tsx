@@ -1,5 +1,5 @@
-import JumpingLettersText from './JumpingLettersText';
-import S from './styled';
+import JumpingLettersText from '../../components/JumpingLettersText/JumpingLettersText';
+import S from '../../components/JumpingLettersText/styled';
 
 const JumpingContainer = () => (
   <S.ParagraphContainer>

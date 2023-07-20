@@ -6,7 +6,7 @@ import S from './styled';
 const Experties = () => (
   <>
     <S.HeaderWrapper>
-      <Glitch active={false} hover={true} text={'Experties'} />
+      <Glitch text={'Experties'} />
     </S.HeaderWrapper>
     <S.BodyWrapper>
       <FLipCardContainer imgArr={imgArr} />

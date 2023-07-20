@@ -5,3 +5,5 @@ todo:
 - split the first page to about me and front page
 - expand the projects to include short summary on the other projects i did and github link (or in footer)
 - fixed invesible footer with icons on the left
+- add loading (and create one)
+- upload to vercel

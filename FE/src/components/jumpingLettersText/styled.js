@@ -1,15 +1,5 @@
 import styled, { css, keyframes } from 'styled-components';
 
-const Jump = keyframes`
-  0%      { font-size: 19px }
-  0.05%   { font-size: 19.5px }
-  0.1%    { font-size: 20px }
-  0.15%    { font-size: 20.5px }
-  0.2%    { font-size: 21px }
-  0.3%    { font-size: 21.5px }
-  0.3%    { font-size: 22px }
-`;
-
 const JumpRowContainer = styled.span`
   display: flex;
   justify-content: left;
@@ -23,10 +13,13 @@ const JumpRowContainer = styled.span`
 const JumpWord = styled.span`
   line-height: 25px;
   padding: 1px;
+  transition: transform 500ms;
+  transition-timing-function: cubic-bezier(0.75, -3, 0.25, 4);
   :hover {
     color: gold;
+    transform: scale(1.1);
     cursor: none;
-    animation: ${Jump} 100s;
+    /* animation: ${Jump} 100s; */
   }
 `;
 
