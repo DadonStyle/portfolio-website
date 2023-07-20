@@ -16,7 +16,7 @@ const FormContainer = styled.div`
 const moveRight = keyframes`
   0.1%  { transform: translateX(0); transform: rotateZ(0deg);}
   0.2%  { transform: translateX(27rem) rotateY(20deg);  }
-  25%   { transform: translateX(27rem) rotateY(20deg);}
+  80%   { transform: translateX(27rem) rotateY(20deg);}
   100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: 0rem 0rem white;  }
 `;
 
@@ -33,9 +33,14 @@ const Form = styled.form`
   padding: 2rem;
   transition: animation 0.8s;
   transform-style: preserve-3d;
-  animation: ${moveRight} 20s ease;
+  animation: ${moveRight} 7s ease;
   min-width: 400px;
   min-height: 400px;
+  box-shadow: -1rem 1rem rgba(255,255,255,0.5);
+  ::after {
+    content: '';
+    box-shadow: 0rem 0rem rgba(255,255,255,0);
+  }
 `;
 
 const NameContainer = styled.div`
@@ -68,8 +73,10 @@ const LinkContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  padding-bottom: 2rem;
+  width: fit-content;
+  margin-bottom: 2rem;
+  border: 2px solid gray;
+  border-radius: 15px;
 `;
 
 const label = styled.label`
@@ -106,8 +113,19 @@ const Link = styled.a`
   justify-content: center;
   align-items: center;
   border: 1px solid wheat;
-  border-radius: 5px;
-  width: 100%;
+  border-radius: 15px;
+  background-color: rgba(113, 32, 142, 1);
+  padding: 1rem;
+  color: white;
+  z-index: 5;
+  cursor: none;
+  border: none;
+  opacity: 1;
+  :hover {
+    background-color: rgba(113, 32, 142, 0.5);
+    color: rgba(255, 255, 255, 0.8);
+    transition: opacity 0.3s ease-in-out;
+  }
 `;
 
 const S = {

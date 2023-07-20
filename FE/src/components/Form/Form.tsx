@@ -1,4 +1,4 @@
-import { FormEvent, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import S from './styled';
 
 const Form = () => {
@@ -29,7 +29,7 @@ const Form = () => {
           <S.Input
             ref={nameRef}
             onChange={handleNameChange}
-            defaultValue="name"
+            placeholder="name"
           />
         </S.NameContainer>
         <S.SubjectContainer>
@@ -37,7 +37,7 @@ const Form = () => {
           <S.Input
             ref={subjectRef}
             onChange={handleSubjectChange}
-            defaultValue="email"
+            placeholder="email subject"
           />
         </S.SubjectContainer>
         <S.MessageContainer>
@@ -45,7 +45,7 @@ const Form = () => {
           <S.Textarea
             ref={textAreaRef}
             onChange={handleTextAreaChange}
-            defaultValue="email"
+            placeholder="Let me know what do you think, means the world for me"
           />
         </S.MessageContainer>
         <S.LinkContainer>
