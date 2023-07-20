@@ -36,10 +36,10 @@ const Form = styled.form`
   animation: ${moveRight} 7s ease;
   min-width: 400px;
   min-height: 400px;
-  box-shadow: -1rem 1rem rgba(255,255,255,0.5);
+  box-shadow: -1rem 1rem rgba(255, 255, 255, 0.5);
   ::after {
     content: '';
-    box-shadow: 0rem 0rem rgba(255,255,255,0);
+    box-shadow: 0rem 0rem rgba(255, 255, 255, 0);
   }
 `;
 
@@ -117,7 +117,7 @@ const Link = styled.a`
   background-color: rgba(113, 32, 142, 1);
   padding: 1rem;
   color: white;
-  z-index: 5;
+  z-index: 3;
   cursor: none;
   border: none;
   opacity: 1;

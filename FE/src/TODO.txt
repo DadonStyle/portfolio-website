@@ -1,6 +1,0 @@
-1. change arrow to longer one in the projects section
-2. change colors, need to be highlited
-3. finish contact me, add video and finish style
-4. header, finish the header, add changing logo
-5. try to build the cursor without package
-6. 

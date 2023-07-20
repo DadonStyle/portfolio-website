@@ -47,11 +47,25 @@ export const generateFloat = () => {
 };
 
 export const svgs = [
-  <Float1 />,
-  <Float2 />,
-  <Float3 />,
-  <Float4 />,
-  <Float5 />,
-  <Float6 />,
-  <Float7 />,
+  <div>
+    <Float1 />
+  </div>,
+  <div>
+    <Float2 />
+  </div>,
+  <div>
+    <Float3 />
+  </div>,
+  <div>
+    <Float4 />
+  </div>,
+  <div>
+    <Float5 />
+  </div>,
+  <div>
+    <Float6 />
+  </div>,
+  <div>
+    <Float7 />
+  </div>,
 ];

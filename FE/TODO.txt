@@ -1,0 +1,7 @@
+todo:
+- finish contact me, add video and finish style
+- header, finish the header, add changing logo
+- try to build the cursor without package
+- split the first page to about me and front page
+- expand the projects to include short summary on the other projects i did and github link (or in footer)
+- fixed invesible footer with icons on the left

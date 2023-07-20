@@ -1,43 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   width="10px"
-   height="6px"
-   viewBox="0 0 117.72784 135.3429"
-   version="1.1"
-   id="svg5"
-   xml:space="preserve"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="right-arrow.svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
-     id="namedview7"
-     pagecolor="#505050"
-     bordercolor="#ffffff"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="1"
-     inkscape:deskcolor="#505050"
-     inkscape:document-units="mm"
-     showgrid="false"
-     inkscape:zoom="0.914906"
-     inkscape:cx="255.76398"
-     inkscape:cy="348.6697"
-     inkscape:window-width="2560"
-     inkscape:window-height="1377"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" /><defs
-     id="defs2" /><g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
-     id="layer1"
-     transform="translate(-43.649193,-50.034464)"><path
-       style="fill:rgba(255,255,255,0.3);stroke:none;stroke-width:0.264583"
-       d="m 46.042469,50.123103 c -2.70232,0.708153 -2.38146,4.040535 -2.38146,6.19464 v 19.314582 81.756245 22.225 c 0,2.34844 0.22389,6.41138 3.70417,5.6761 2.94066,-0.62124 6.15778,-3.25252 8.73125,-4.77731 5.61049,-3.32502 11.26675,-6.59183 16.93333,-9.82028 20.71767,-11.80412 41.204621,-24.01173 61.912501,-35.83278 6.72597,-3.8399 13.38209,-7.80204 20.10833,-11.64167 2.01824,-1.15226 6.12933,-2.57387 6.31825,-5.25224 0.20399,-2.89693 -3.44805,-4.14576 -5.5245,-5.33109 -6.37249,-3.63802 -12.67751,-7.39511 -19.05,-11.03313 C 114.22882,88.719674 91.867299,75.479475 69.325599,62.556273 c -5.56816,-3.192197 -11.10226,-6.443291 -16.66875,-9.638505 -1.77028,-1.016156 -4.42889,-3.367392 -6.61438,-2.794665 z"
-       id="path1945" /></g></svg>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#ffffff" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 330.002 330.002" xml:space="preserve">
+<path id="XMLID_19_" d="M229.966,0.847c-6.011-2.109-12.698-0.19-16.678,4.784L93.288,155.635
+	c-4.382,5.478-4.382,13.263,0.001,18.741l120,149.996c2.902,3.628,7.245,5.63,11.716,5.63c1.658,0,3.336-0.276,4.962-0.847
+	c6.012-2.108,10.035-7.784,10.035-14.154v-300C240.001,8.63,235.978,2.955,229.966,0.847z"/>
+</svg>

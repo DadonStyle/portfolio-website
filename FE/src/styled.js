@@ -5,35 +5,17 @@ const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  z-index: -9;
+  z-index: 0;
 `;
 
 const Header = styled.div`
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  background: transparent;
-  padding: 3em 4em;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow-x: hidden;
+  width: 100%;
+  top: 2%;
+  left: 0;
   position: fixed;
-  cursor: none;
-`;
-
-const Footer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-
-const Sweep = keyframes`
-  0%    { opacity: 0; transform: translateX(-8px) }
-  100%  { opacity: 1; transform: translateX(0) }
 `;
 
 const Section = styled.section`
@@ -42,27 +24,23 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  gap: 1.5rem;
 `;
 
-const SectionBody = styled.div`
+const Footer = styled.footer`
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
   justify-content: center;
   align-items: center;
-`;
-
-const GlitchWrapper = styled.div`
-  display: flex;
-  gap: 30px;
+  position: fixed;
+  width: 100%;
+  bottom: 2%;
 `;
 
 const S = {
   MainContainer,
   Header,
-  Footer,
   Section,
-  SectionBody,
-  GlitchWrapper,
+  Footer,
 };
 export default S;

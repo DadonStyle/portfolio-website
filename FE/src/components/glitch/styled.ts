@@ -62,10 +62,10 @@ const StyledGlitch = styled.span<IStyledGlitch>`
     opacity: 0.8;
   }
   &:after {
-    z-index: -2;
+    z-index: 3;
   }
   &:before {
-    z-index: -1;
+    z-index: 2;
   }
 
   ${({ active }) => (active ? animationHover : '')}

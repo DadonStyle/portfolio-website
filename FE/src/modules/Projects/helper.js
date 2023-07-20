@@ -1,14 +1,8 @@
-import extentionImg from './assets/img/vs-code-extensions.jpg';
-import chatImg from './assets/img/ChatApp.jpg';
-import ERC20Img from './assets/img/ERC20.jpg';
-import shortenUrlImg from './assets/img/ShortenUrl.jpg';
-import cryptoTowerImg from './assets/img/CryptoTower.png';
-import reactImg from './assets/img/React.png';
-import nodeJsImg from './assets/img/nodejs.png';
-import cssImg from './assets/img/css3.png';
-import htmlImg from './assets/img/html5.png';
-import JsImg from './assets/img/js.png';
-import TsImg from './assets/img/ts.png';
+import extentionImg from '../../assets/img/vs-code-extensions.jpg';
+import chatImg from '../../assets/img/ChatApp.jpg';
+import ERC20Img from '../../assets/img/ERC20.jpg';
+import shortenUrlImg from '../../assets/img/ShortenUrl.jpg';
+import cryptoTowerImg from '../../assets/img/CryptoTower.png';
 
 export const textsImgsArr = [
   {
@@ -45,20 +39,5 @@ export const textsImgsArr = [
     desc: 'Game, imitation of Crash',
     link: 'https://github.com/DadonStyle/Crypto-Tower-FE',
     tech: 'Js, React, Redux',
-  },
-];
-
-export const imgArr = [
-  {
-    frontImg: reactImg,
-    backImg: nodeJsImg,
-  },
-  {
-    frontImg: cssImg,
-    backImg: htmlImg,
-  },
-  {
-    frontImg: JsImg,
-    backImg: TsImg,
   },
 ];

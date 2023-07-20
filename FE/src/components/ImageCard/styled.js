@@ -1,9 +1,9 @@
 import styled, { keyframes } from 'styled-components';
 
-const right = keyframes`
-0% {}
-100% {}
-
+const jumpingRight = keyframes`
+  0% {transform: translateX(0); left: 0}
+  50% {transform: translateX(-10px); left: 0}
+  100% {transform: translateX(0); left: 0}
 `;
 
 const ImageCardContainer = styled.div`
@@ -37,6 +37,8 @@ const TextWrapper = styled.div`
     border-top: 2px solid silver;
   }
   svg {
+    rotate: 180deg;
+
     position: absolute;
     width: 20px;
     height: 20px;
@@ -46,8 +48,8 @@ const TextWrapper = styled.div`
   }
   :hover {
     svg {
-      left: 0;
-      transition: all 0.2s ease-in-out;
+      animation: ${jumpingRight} 0.7s ease-in-out infinite;
+      animation-delay: 0.2s;
     }
   }
 `;
@@ -63,14 +65,15 @@ const TextInsideWrapper = styled.a`
   :hover {
     transform: translateX(2rem);
     transition: 0.3s ease-in-out;
-    color: rgba(255, 255, 255, 0.6);
+    color: white;
+    opacity: 0.6;
     cursor: none;
   }
 `;
 
 const TextName = styled.div`
   font-weight: bold;
-  font-size: 22px;
+  font-size: 32px;
   display: flex;
 `;
 
@@ -80,6 +83,7 @@ const TextDesc = styled.div`
 
 const TextTech = styled.div`
   display: flex;
+  color: aqua;
 `;
 
 const S = {

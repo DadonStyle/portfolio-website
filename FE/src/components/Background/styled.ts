@@ -9,7 +9,7 @@ const FloatContainer = styled.div`
     position: absolute;
     max-height: 60px;
     max-width: 60px;
-    z-index: -3;
+    z-index: 1;
     filter: 60px;
     overflow: visible;
   }
@@ -58,12 +58,12 @@ const BackgroundImg = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: -10;
+  z-index: 0;
   &:after {
-    animation: ${Grain} 10s steps(20) infinite;
+    animation: ${Grain} 10s steps(8) infinite;
     background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
     content: '';
-    z-index: -10;
+    z-index: 0;
     height: 300%;
     width: 300%;
     position: fixed;
@@ -73,9 +73,14 @@ const BackgroundImg = styled.div`
   }
 `;
 
-const AnimationWrapper = styled.svg<IAnimationWrapper>`
+const AnimationWrapper = styled.div<IAnimationWrapper>`
+  position: absolute;
   animation: ${({ floatAnimation }) => floatAnimation}
     ${50 + Math.floor(Math.random() * 50) + 's'} ease-in-out infinite;
+  :hover {
+    animation-play-state: paused;
+  }
+  z-index: 2;
 `;
 
 const S = {
