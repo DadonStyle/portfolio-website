@@ -5,12 +5,14 @@ import FirstPage from './modules/FirstPage/FirstPage';
 import Projects from './modules/Projects/Projects';
 import Experties from './modules/Experties/Experties';
 import ContactMe from './modules/ContactMe/ContactMe';
+import useMousePosition from './hooks/useMousePosition';
 
 const App = () => {
-  // https://codepen.io/RSH87/pen/gMdJKQ source for background
+  const cursor = useMousePosition();
   return (
     <>
       <S.MainContainer>
+        {cursor}
         <Background />
         <S.Header>
           <div>Logo</div>
