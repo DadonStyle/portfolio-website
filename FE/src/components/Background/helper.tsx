@@ -7,12 +7,12 @@ import { ReactComponent as Float6 } from '../../assets/svg/float6.svg';
 import { ReactComponent as Float7 } from '../../assets/svg/float7.svg';
 import { keyframes } from 'styled-components';
 
-export const generateFloat = () => {
+export const generateFloat = (top: number, right: number) => {
   const float = keyframes`
   0% {
-    top: ${Math.floor(Math.random() * 100) + '%'};
+    top: ${top + '%'};
     rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'}; 
-    right: ${Math.floor(Math.random() * 100) + '%'};
+    right: ${right + '%'};
     opacity: ${0};
     transform: scale(${Math.floor(Math.random() * 3)});
   }
@@ -47,25 +47,27 @@ export const generateFloat = () => {
 };
 
 export const svgs = [
-  <div>
+  <div draggable>
     <Float1 />
   </div>,
-  <div>
+  <div draggable>
     <Float2 />
   </div>,
-  <div>
+  <div draggable>
     <Float3 />
   </div>,
-  <div>
+  <div draggable>
     <Float4 />
   </div>,
-  <div>
+  <div draggable>
     <Float5 />
   </div>,
-  <div>
+  <div draggable>
     <Float6 />
   </div>,
-  <div>
+  <div draggable>
     <Float7 />
   </div>,
 ];
+
+export const randomId = (max: number) => Math.floor(Math.random() * max);
