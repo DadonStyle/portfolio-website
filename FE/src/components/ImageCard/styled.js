@@ -63,6 +63,7 @@ const TextInsideWrapper = styled.a`
   color: white;
   cursor: none;
   :hover {
+    text-decoration: underline;
     transform: translateX(2rem);
     transition: 0.3s ease-in-out;
     color: white;

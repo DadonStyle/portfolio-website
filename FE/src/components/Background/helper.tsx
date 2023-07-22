@@ -7,38 +7,43 @@ import { ReactComponent as Float6 } from '../../assets/svg/float6.svg';
 import { ReactComponent as Float7 } from '../../assets/svg/float7.svg';
 import { keyframes } from 'styled-components';
 
-export const generateFloat = (top: number, right: number) => {
+export const generateFloat = (
+  top: number,
+  left: number,
+  startOpacity = 0,
+  startScale = Math.floor(Math.random() * 3)
+) => {
   const float = keyframes`
   0% {
     top: ${top + '%'};
     rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'}; 
-    right: ${right + '%'};
-    opacity: ${0};
-    transform: scale(${Math.floor(Math.random() * 3)});
+    left: ${left + '%'};
+    opacity: ${startOpacity};
+    transform: scale(${startScale});
   }
   25% {
     rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'};
-    right: ${Math.floor(Math.random() * 100) + '%'};
+    left: ${Math.floor(Math.random() * 100) + '%'};
     opacity: ${Math.random()};
     transform: scale(${Math.floor(Math.random() * 3)});
   }
   50% {
     top: ${Math.floor(Math.random() * 100) + '%'};
-    rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'}; 
-    right: ${Math.floor(Math.random() * 100) + '%'};
+    rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'};
+    left: ${Math.floor(Math.random() * 100) + '%'};
     opacity: ${Math.random()};
     transform: scale(${Math.floor(Math.random() * 3)});
   }
   75% {
     top: ${Math.floor(Math.random() * 100) + '%'};
-    rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'};    
+    rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'};  
     opacity: ${Math.random()};
     transform: scale(${Math.floor(Math.random() * 3)});
   }
   100% {
     top: ${Math.floor(Math.random() * 100) + '%'};
     rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'}; 
-    right: ${10 + Math.floor(Math.random() * 100) + '%'};
+    left: ${10 + Math.floor(Math.random() * 100) + '%'};
     opacity: 0;
     transform: scale(${Math.floor(Math.random() * 3)});
   }
@@ -48,25 +53,25 @@ export const generateFloat = (top: number, right: number) => {
 
 export const svgs = [
   <div draggable>
-    <Float1 />
+    <Float1 /> {/* light blue */}
   </div>,
   <div draggable>
-    <Float2 />
+    <Float2 /> {/* green */}
   </div>,
   <div draggable>
-    <Float3 />
+    <Float3 /> {/* deep blue */}
   </div>,
   <div draggable>
-    <Float4 />
+    <Float4 /> {/* light purple */}
   </div>,
   <div draggable>
-    <Float5 />
+    <Float5 /> {/* orange */}
   </div>,
   <div draggable>
-    <Float6 />
+    <Float6 /> {/* red */}
   </div>,
   <div draggable>
-    <Float7 />
+    <Float7 /> {/* yellow */}
   </div>,
 ];
 

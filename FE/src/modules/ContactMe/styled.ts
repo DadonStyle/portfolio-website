@@ -1,5 +1,14 @@
 import styled, { keyframes } from 'styled-components';
 
+const ContactWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 2rem;
+  flex-direction: column;
+`;
+
 const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -32,10 +41,10 @@ const FormContainer = styled.div`
 `;
 
 const moveRight = keyframes`
-  /* 0.1%  { transform: translateX(0); transform: rotateZ(0deg); box-shadow: 0rem 0rem rgba(255, 255, 255);}
-  0.2%  { transform: translateX(32rem) rotateY(20deg); box-shadow: 0rem 0rem rgba(255, 255, 255); }
-  80%   { transform: translateX(32rem) rotateY(20deg); box-shadow: 0.1rem 0.1rem rgba(255, 255, 255); }
-  100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: -0.2rem 0.2rem rgba(255, 255, 255);  } */
+  0.1%  { transform: translateX(0); transform: rotateZ(0deg); box-shadow: 0rem 0rem rgba(0, 0, 0);}
+  0.2%  { transform: translateX(32rem) rotateY(20deg); box-shadow: 0rem 0rem rgba(0, 0, 0); }
+  80%   { transform: translateX(32rem) rotateY(20deg); box-shadow: 0.1rem 0.1rem rgba(0, 0, 0); }
+  100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: -0.2rem 0.2rem rgba(0, 0, 0);  }
 `;
 
 const Form = styled.form`
@@ -162,6 +171,7 @@ const Link = styled.a`
 `;
 
 const S = {
+  ContactWrapper,
   HeaderWrapper,
   BodyWrapper,
   FormContainer,
