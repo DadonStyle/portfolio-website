@@ -2,6 +2,6 @@ todo:
 - split the first page to about me and front page
 - fixed invesible footer with icons on the left (contact ME when visible large github icon)
 - header, finish the header, add changing logo
-- add loading (and create one)
+- add a scroll to element, example: u click on "contact" it will scroll down to contact
 - mobile design
 - upload to vercel
