@@ -2,7 +2,11 @@ import { useRef, useState } from 'react';
 import Glitch from '../../components/Glitch/Glitch';
 import S from './styled';
 
-const ContactMe = () => {
+type TProps = {
+  isVisible?: boolean;
+};
+
+const ContactMe = (props: TProps) => {
   const nameRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
@@ -22,7 +26,7 @@ const ContactMe = () => {
       </S.HeaderWrapper>
       <S.BodyWrapper>
         <S.FormContainer>
-          <S.Form>
+          <S.Form isVisible={props.isVisible!}>
             <S.NameContainer>
               <S.label>Name</S.label>
               <S.Input

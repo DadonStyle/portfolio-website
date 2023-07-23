@@ -1,7 +1,7 @@
 todo:
 - split the first page to about me and front page
-- fixed invesible footer with icons on the left
-- add magic scroll (should trigger the animation of the contact me when reached, gitlab logo will scale when reached the projects) https://betterprogramming.pub/simple-react-scroll-animations-with-zero-dependencies-b496c1e1c7bd
+- fixed invesible footer with icons on the left (contact ME when visible large github icon)
 - header, finish the header, add changing logo
 - add loading (and create one)
+- mobile design
 - upload to vercel

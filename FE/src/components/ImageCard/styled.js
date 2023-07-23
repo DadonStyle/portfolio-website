@@ -60,11 +60,13 @@ const TextInsideWrapper = styled.a`
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
+  width: 100%;
   color: white;
   cursor: none;
   :hover {
     text-decoration: underline;
     padding-left: 2rem;
+    margin-right: -2rem; // when transition triggered it adds padding and remove margin. (text stays in place)
     transition: 0.3s ease-in-out;
     color: white;
     opacity: 0.6;

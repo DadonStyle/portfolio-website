@@ -18,15 +18,6 @@ const Header = styled.div`
   position: fixed;
 `;
 
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  gap: 1.5rem;
-`;
-
 const Footer = styled.footer`
   display: flex;
   flex-direction: column;
@@ -40,7 +31,6 @@ const Footer = styled.footer`
 const S = {
   MainContainer,
   Header,
-  Section,
   Footer,
 };
 export default S;

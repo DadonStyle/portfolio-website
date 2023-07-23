@@ -1,6 +1,5 @@
 import { useState, PropsWithChildren } from 'react';
 import { ReactComponent as RightArrow } from '../../assets/svg/right-arrow.svg';
-import { ReactComponent as Github } from '../../assets/svg/github-mark.svg';
 import S from './styled';
 
 interface ITextObject {

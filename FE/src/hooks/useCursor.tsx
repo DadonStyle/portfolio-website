@@ -14,7 +14,7 @@ const Cursor = styled.div`
   opacity: 0.6;
 `;
 
-const useMousePosition = () => {
+const useCursor = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const handleMouseMove = (event: MouseEvent) => {
     const { clientX, clientY } = event;
@@ -32,4 +32,4 @@ const useMousePosition = () => {
   return <Cursor ref={cursorRef} />;
 };
 
-export default useMousePosition;
+export default useCursor;

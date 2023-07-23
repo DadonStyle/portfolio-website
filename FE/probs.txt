@@ -1,0 +1,18 @@
+problem & solutions:
+1. zero dependencies - bc i did wanted to learn how stuff coded behind the scene, no lib was used (except core lib's),
+it was time consuming and completly worth it.
+sol: a lot of guides, stackoverflow and chatting with good friends (google & chatGPT) also real humans, I've manage to 
+overcome and build everything i wanted (the most difficult one was the svg d&d)
+
+2. state managment - bc their is a complex layout, grain animation + floating svg's + d&d, every setState can ruin/restart everything
+sol: used correct folder structure so state wont update unrelevant components (based on React Fiber),
+used useRef (react dont like it however sometimes its the better fit);
+
+3. imgs - imgs was a bit of a struggle in this project, from quality, to copyrights and width & heights of the original asset
+sol: learned how to use inkscape to cut dynamic sizes, and deal with imgs converstions (online converstion did not worked out)
+
+4. svgs - all the floating svgs were hard to find, and than implement as the original version is jpg
+sol: learned how to convert img to bitmap than to svg
+
+5. scrolling - needed to do it alone (rephrase this),
+sol: in a hook, i used the observer design pattern

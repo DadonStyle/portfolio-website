@@ -41,13 +41,17 @@ const FormContainer = styled.div`
 `;
 
 const moveRight = keyframes`
-  /* 0.1%  { transform: translateX(0); transform: rotateZ(0deg); box-shadow: 0rem 0rem rgba(0, 0, 0);}
-  0.2%  { transform: translateX(32rem) rotateY(20deg); box-shadow: 0rem 0rem rgba(0, 0, 0); }
-  80%   { transform: translateX(32rem) rotateY(20deg); box-shadow: 0.1rem 0.1rem rgba(0, 0, 0); }
-  100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: -0.2rem 0.2rem rgba(0, 0, 0);  } */
+  0.1%  { transform: translateX(0); transform: rotateZ(0deg); box-shadow: 0rem 0rem rgba(0, 0, 0);}
+  20%  { transform: translateX(32rem) rotateY(20deg); box-shadow: 0rem 0rem rgba(0, 0, 0); }
+  70%   { transform: translateX(32rem) rotateY(20deg); box-shadow: 0.1rem 0.1rem rgba(0, 0, 0); }
+  100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: -0.2rem 0.2rem rgba(0, 0, 0);  }
 `;
 
-const Form = styled.form`
+interface IForm {
+  isVisible: boolean;
+}
+
+const Form = styled.form<IForm>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,7 +68,8 @@ const Form = styled.form`
   padding: 2rem;
   transition: animation 0.8s;
   transform-style: preserve-3d;
-  animation: ${moveRight} 7s ease;
+  animation: ${(props) => (props.isVisible ? moveRight : '')} 6s ease;
+  animation-delay: 1s;
   min-height: 400px;
   box-shadow: -0.2rem 0.2rem 0.2rem 0rem black;
   width: 600px;
