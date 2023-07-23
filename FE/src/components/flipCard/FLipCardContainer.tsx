@@ -15,7 +15,11 @@ const FLipCardContainer = (props: PropsWithChildren<IFLipCardContainer>) => {
   return (
     <S.FlipCardBigContainer>
       {props.imgArr?.map((item) => (
-        <FlipCard frontImg={item.frontImg} backImg={item.backImg} />
+        <FlipCard
+          key={Math.random()}
+          frontImg={item.frontImg}
+          backImg={item.backImg}
+        />
       ))}
     </S.FlipCardBigContainer>
   );

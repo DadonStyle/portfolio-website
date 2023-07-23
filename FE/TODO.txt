@@ -1,9 +1,7 @@
 todo:
-- finish contact me, add video and finish style
-- header, finish the header, add changing logo
-- try to build the cursor without package
 - split the first page to about me and front page
-- expand the projects to include short summary on the other projects i did and github link (or in footer)
 - fixed invesible footer with icons on the left
+- add magic scroll (should trigger the animation of the contact me when reached, gitlab logo will scale when reached the projects) https://betterprogramming.pub/simple-react-scroll-animations-with-zero-dependencies-b496c1e1c7bd
+- header, finish the header, add changing logo
 - add loading (and create one)
 - upload to vercel
