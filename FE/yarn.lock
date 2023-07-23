@@ -1164,11 +1164,6 @@ prettier@^2.8.8:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
-react-animated-cursor@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/react-animated-cursor/-/react-animated-cursor-2.7.0.tgz#caf56f3ff3ce47f5fd1f4ba3622ebf7d137eb274"
-  integrity sha512-l6A0aVLBC+XmNbYWfzdkvV/OBC5h4KjpUiLUvqXNOrniGr4XSCrVA225XNBpIpwtalzOPMwj5DYUxsoKoI02Bw==
-
 react-dom@^18.2.0:
   version "18.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"

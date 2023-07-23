@@ -16,7 +16,7 @@ const ContactMe = () => {
   const handleTextAreaChange = () => setTextArea(textAreaRef.current?.value);
 
   return (
-    <>
+    <S.ContactWrapper>
       <S.HeaderWrapper>
         <Glitch text={'Contact Me'} />
       </S.HeaderWrapper>
@@ -57,7 +57,7 @@ const ContactMe = () => {
           </S.Form>
         </S.FormContainer>
       </S.BodyWrapper>
-    </>
+    </S.ContactWrapper>
   );
 };
 

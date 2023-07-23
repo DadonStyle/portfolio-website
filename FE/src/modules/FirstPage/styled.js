@@ -9,6 +9,10 @@ const Wrapper = styled.div`
   z-index: 4;
 `;
 
+const ParagraphContainer = styled.div`
+  width: 100%;
+`;
+
 const GlitchWrapper = styled.div`
   display: flex;
   gap: 30px;
@@ -16,6 +20,7 @@ const GlitchWrapper = styled.div`
 
 const S = {
   Wrapper,
+  ParagraphContainer,
   GlitchWrapper,
 };
 
