@@ -3,16 +3,35 @@ import S from './styled';
 
 export interface IGlitchProps {
   text: string;
+  isRandomFont?: boolean;
+  isRandomRotateZ?: boolean;
+  isNoam?: boolean;
+  isHey?: boolean;
 }
 
+// gettign a number between
+const getRandomDeg = (): number => {
+  const deg: number = Math.floor(Math.random() * 12 - 6);
+  if (deg > 3 || deg < -3) {
+    return deg;
+  }
+  return getRandomDeg();
+};
+
 const Glitch = (props: PropsWithChildren<IGlitchProps>) => {
-  let randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  const randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  const randomFont = (() => Math.floor(Math.random() * 4 + 4))();
+  const randomDeg = getRandomDeg();
 
   return (
     <S.GlitchContainer>
       <S.StyledGlitch
         text={props.text}
         randomColor={randomColor}
+        fontSize={props.isRandomFont ? `${randomFont}rem` : '4rem'}
+        rotateZ={props.isRandomRotateZ ? `${randomDeg}deg` : '0deg'}
+        isNoam={props.isNoam ?? false}
+        isHey={props.isHey ?? false}
       >
         {props.text}
       </S.StyledGlitch>

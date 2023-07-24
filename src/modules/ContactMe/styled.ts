@@ -41,7 +41,7 @@ const FormContainer = styled.div`
 `;
 
 const moveRight = keyframes`
-  0.1%  { transform: translateX(0); transform: rotateZ(0deg); box-shadow: 0rem 0rem rgba(0, 0, 0);}
+  0.1%  { transform: translateX(0) rotateY(0deg); box-shadow: 0rem 0rem rgba(0, 0, 0);}
   20%  { transform: translateX(32rem) rotateY(20deg); box-shadow: 0rem 0rem rgba(0, 0, 0); }
   70%   { transform: translateX(32rem) rotateY(20deg); box-shadow: 0.1rem 0.1rem rgba(0, 0, 0); }
   100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: -0.2rem 0.2rem rgba(0, 0, 0);  }
@@ -107,19 +107,8 @@ const LinkContainer = styled.div`
   align-items: center;
   width: fit-content;
   margin-bottom: 2rem;
-  border: 2px solid gray;
+  border: 2px solid white;
   border-radius: 15px;
-`;
-
-const label = styled.label`
-  display: flex;
-  cursor: none;
-  font-size: 2rem;
-  font-weight: 700;
-  width: 100%;
-  :hover {
-    color: whitesmoke;
-  }
 `;
 
 const Input = styled.input`
@@ -135,8 +124,17 @@ const Input = styled.input`
   :hover {
     border: 2px dotted white;
   }
-  :checked {
-    border: 2px dotted red;
+`;
+
+const Label = styled.label`
+  display: flex;
+  cursor: none;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  :hover {
+    text-decoration: lavenderblush wavy underline;
   }
 `;
 
@@ -159,13 +157,11 @@ const Link = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid wheat;
   border-radius: 15px;
   padding: 1rem;
   color: white;
   z-index: 3;
   cursor: none;
-  border: none;
   opacity: 1;
   :hover {
     background-color: rgba(255, 255, 255, 0.2);
@@ -184,7 +180,7 @@ const S = {
   SubjectContainer,
   MessageContainer,
   LinkContainer,
-  label,
+  Label,
   Input,
   Textarea,
   Link,

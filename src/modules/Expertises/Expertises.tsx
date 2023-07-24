@@ -3,10 +3,10 @@ import Glitch from '../../components/Glitch/Glitch';
 import { imgArr } from './helper';
 import S from './styled';
 
-const Experties = () => (
+const Expertises = () => (
   <>
     <S.HeaderWrapper>
-      <Glitch text={'Experties'} />
+      <Glitch text={'Expertises'} />
     </S.HeaderWrapper>
     <S.BodyWrapper>
       <FLipCardContainer imgArr={imgArr} />
@@ -14,4 +14,4 @@ const Experties = () => (
   </>
 );
 
-export default Experties;
+export default Expertises;

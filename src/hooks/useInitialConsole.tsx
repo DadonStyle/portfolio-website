@@ -11,6 +11,10 @@ const useInitialConsole = () => {
       '%c Welcome and thank you for exploring my portfolio!',
       'color:brown; font-size: medium;'
     );
+    console.log(
+      "%c If you are curious, here's the github link: https://github.com/DadonStyle/portfolio-website/tree/master",
+      'color:brown; font-size: medium;'
+    );
   }, []);
 };
 

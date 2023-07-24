@@ -2,7 +2,6 @@ import { RefObject, useState, useEffect } from 'react';
 
 const useObserver = (props: RefObject<HTMLElement>) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  console.log(isVisible);
 
   useEffect(() => {
     // CHANGE ANY TYPE
@@ -18,7 +17,7 @@ const useObserver = (props: RefObject<HTMLElement>) => {
     }
   }, []);
 
-  return [isVisible];
+  return isVisible;
 };
 
 export default useObserver;

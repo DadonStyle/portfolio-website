@@ -1,9 +1,10 @@
 import S from './styled';
 import FirstPage from './FirstPage/FirstPage';
 import Projects from './Projects/Projects';
-import Experties from './Experties/Experties';
+import Expertises from './Expertises/Expertises';
 import ContactMe from './ContactMe/ContactMe';
 import Section from '../components/Section/Section';
+import AboutMe from './AboutMe/AboutMe';
 // import useObserver from '../hooks/useObserver';
 
 const MainContainer = () => {
@@ -20,10 +21,10 @@ const MainContainer = () => {
         <Projects />
       </Section>
       <Section>
-        <Experties />
+        <Expertises />
       </Section>
       <Section>
-        <>ABOUT ME</>
+        <AboutMe />
       </Section>
       <Section>
         <ContactMe />

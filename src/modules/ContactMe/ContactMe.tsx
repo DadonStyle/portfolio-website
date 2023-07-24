@@ -28,7 +28,7 @@ const ContactMe = (props: TProps) => {
         <S.FormContainer>
           <S.Form isVisible={props.isVisible!}>
             <S.NameContainer>
-              <S.label>Name</S.label>
+              <S.Label>Name</S.Label>
               <S.Input
                 ref={nameRef}
                 onChange={handleNameChange}
@@ -36,7 +36,7 @@ const ContactMe = (props: TProps) => {
               />
             </S.NameContainer>
             <S.SubjectContainer>
-              <S.label>Subject</S.label>
+              <S.Label>Subject</S.Label>
               <S.Input
                 ref={subjectRef}
                 onChange={handleSubjectChange}
@@ -44,7 +44,7 @@ const ContactMe = (props: TProps) => {
               />
             </S.SubjectContainer>
             <S.MessageContainer>
-              <S.label>Message</S.label>
+              <S.Label>Message</S.Label>
               <S.Textarea
                 ref={textAreaRef}
                 onChange={handleTextAreaChange}

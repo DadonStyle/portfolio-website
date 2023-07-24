@@ -8,8 +8,7 @@ type TProps = {
 
 const Section = (props: TProps) => {
   const myRef = useRef<HTMLElement>(null);
-  const [isVisible] = useObserver(myRef);
-  // console.log(isVisible);
+  const isVisible = useObserver(myRef);
 
   const newChild = cloneElement(props.children, { isVisible }); // pass props to dynamic children
 

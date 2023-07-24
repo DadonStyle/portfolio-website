@@ -19,9 +19,9 @@ const JumpingContainer = () => (
     <p>
       <JumpingLettersText text="Fast-forward to this day," />
       <JumpingLettersText text="I’ve developed, maintained, & scaled from the first month`s," />
-      <JumpingLettersText text="web application project in React JS & TS for a web3 company," />
+      <JumpingLettersText text="web-based SaaS in React JS & TS for a web3 company," />
       <JumpingLettersText text="worked in a team, agile environment & learned A LOT." />
-      <JumpingLettersText text="These days I'm looking for  new place to grow with," />
+      <JumpingLettersText text="These days I'm looking for a new place to grow with," />
       <JumpingLettersText text="build awesome products & hopefully leading projects." />
       <JumpingLettersText text="In my free time, I like to do fun side projects, " />
     </p>
