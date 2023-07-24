@@ -1,8 +1,7 @@
-
 import Background from './components/Background/Background';
 import useCursor from './hooks/useCursor';
 import useInitialConsole from './hooks/useInitialConsole';
-import MainContainer from './modules/MainContainer';
+import MainContainer from './modules/MainContainer/MainContainer';
 
 const App = () => {
   const cursor = useCursor();
