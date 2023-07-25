@@ -3,17 +3,14 @@ import Glitch from '../../components/Glitch/Glitch';
 import ImageCard from '../../components/ImageCard/ImageCard';
 import S from './styled';
 
-const Projects = () => {
-  return (
-    <>
-      <S.HeaderWrapper>
-        <Glitch text={'Projects - Highlights'} />
-      </S.HeaderWrapper>
-      <S.BodyWrapper>
-        <ImageCard textsImgsArr={textsImgsArr} />
-      </S.BodyWrapper>
-    </>
-  );
-};
-
+const Projects = () => (
+  <>
+    <S.HeaderWrapper>
+      <Glitch text={'Projects - Highlights'} />
+    </S.HeaderWrapper>
+    <S.BodyWrapper>
+      <ImageCard textsImgsArr={textsImgsArr} />
+    </S.BodyWrapper>
+  </>
+);
 export default Projects;

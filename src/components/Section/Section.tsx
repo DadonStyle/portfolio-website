@@ -6,6 +6,7 @@ type TProps = {
   children: ReactElement;
   scrollIndex: number | undefined;
   scrollId: number;
+  setScrollIndex: (item: undefined) => void;
 };
 
 const Section = (props: TProps) => {
@@ -15,15 +16,14 @@ const Section = (props: TProps) => {
   useEffect(() => {
     if (props.scrollIndex === props.scrollId) {
       myRef.current?.scrollIntoView();
+      props.setScrollIndex(undefined);
     }
   }, [props.scrollIndex]);
 
   const newChild = cloneElement(props.children, { isVisible }); // pass props to dynamic children
 
   return (
-    <S.Section className="section" isVisible={isVisible} ref={myRef}>
-      {' '}
-      {/* class name used as an id for the "getElementsByClassName" */}
+    <S.Section isVisible={isVisible} ref={myRef}>
       {newChild}
     </S.Section>
   );

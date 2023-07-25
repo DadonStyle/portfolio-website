@@ -4,7 +4,6 @@ const useObserver = (props: RefObject<HTMLElement>) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
-    // CHANGE ANY TYPE
     let observer;
     if (!observer && props.current) {
       observer = new IntersectionObserver((entries) => {

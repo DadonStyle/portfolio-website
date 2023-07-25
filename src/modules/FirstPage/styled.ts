@@ -1,12 +1,25 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-const Wrapper = styled.div`
+export const slideInFromLeft = keyframes`
+  0% {
+    transform: translateX(-100%); opacity: 0;
+  }
+  100% {
+    transform: translateX(0); opacity: 1;
+  }
+`;
+interface IWrapper {
+  isVisible: boolean;
+}
+
+const Wrapper = styled.div<IWrapper>`
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
   justify-content: center;
   align-items: center;
   z-index: 4;
+  animation: ${(props) => (props.isVisible ? slideInFromLeft : '')} 3s ease;
 `;
 
 interface IGlitchWrapper {

@@ -1,8 +1,12 @@
 import S from './styled';
 import Glitch from '../../components/Glitch/Glitch';
 
-const FirstPage = () => (
-  <S.Wrapper>
+type TProps = {
+  isVisible?: boolean;
+};
+
+const FirstPage = (props: TProps) => (
+  <S.Wrapper isVisible={props.isVisible!}>
     <S.GlitchWrapper isGap={true}>
       {'Hey, I am Noam'.split(' ').map((item) => (
         <Glitch
@@ -29,7 +33,7 @@ const FirstPage = () => (
     <br />
     <br />
     <br />
-    <S.TextWrapper>And this is my:</S.TextWrapper>
+    <S.TextWrapper>And welcome to my:</S.TextWrapper>
     <S.GlitchWrapper isGap={true}>
       {'Interactive Website'.split(' ').map((item) => (
         <Glitch

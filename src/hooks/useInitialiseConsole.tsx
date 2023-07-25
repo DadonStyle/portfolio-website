@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useInitialConsole = () => {
+const useInitialiseConsole = () => {
   useEffect(() => {
     console.log(
       "%c,-.___,-.\r \n\\_/_ _\\_/\r\n  )O_O(\r\n { (_) }\r\n  `-^-'",
@@ -18,4 +18,4 @@ const useInitialConsole = () => {
   }, []);
 };
 
-export default useInitialConsole;
+export default useInitialiseConsole;

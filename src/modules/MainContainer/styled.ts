@@ -1,4 +1,3 @@
-import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
 const MainContainer = styled.div`
@@ -6,6 +5,7 @@ const MainContainer = styled.div`
   flex-direction: column;
   overflow: hidden;
   z-index: 0;
+  gap: 1rem;
 `;
 
 const Header = styled.div`

@@ -4,7 +4,7 @@ const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   gap: 2rem;
   flex-direction: column;
 `;

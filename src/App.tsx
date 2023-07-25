@@ -1,17 +1,28 @@
+import { RefObject, useRef } from 'react';
 import Background from './components/Background/Background';
 import useCursor from './hooks/useCursor';
-import useInitialConsole from './hooks/useInitialConsole';
+import useInitialiseConsole from './hooks/useInitialiseConsole';
 import MainContainer from './modules/MainContainer/MainContainer';
+import useScrollTopOnRefresh from './hooks/useScrollTopOnRefresh';
+import useInitialiseLocalStorage from './hooks/useinitialiseLocalStorage';
+
+export interface IBackground {
+  backgroundRef: RefObject<HTMLDivElement>;
+}
 
 const App = () => {
   const cursor = useCursor();
-  useInitialConsole();
+  const backgroundRef = useRef<HTMLDivElement>(null);
+  useInitialiseConsole();
+  useInitialiseLocalStorage(); // important for scroll index
+  useScrollTopOnRefresh();
+
   return (
-    <>
-      <Background />
+    <div ref={backgroundRef}>
+      <Background backgroundRef={backgroundRef} />
       {cursor}
-      <MainContainer />
-    </>
+      <MainContainer backgroundRef={backgroundRef} />
+    </div>
   );
 };
 
