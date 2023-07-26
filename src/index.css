@@ -13,12 +13,14 @@
   -webkit-text-size-adjust: 100%;
   scrollbar-width: thin;
   ::-webkit-scrollbar {
+    display: none;
     height: 12px;
     width: 12px;
     background: #484849;
   }
 
   ::-webkit-scrollbar-thumb {
+    display: none;
     background: rgba(255, 29, 88, 1);
     -webkit-border-radius: 90px;
     -webkit-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.75);
@@ -26,6 +28,7 @@
 
   ::-webkit-scrollbar-corner {
     background: #000;
+    display: none;
   }
 }
 
