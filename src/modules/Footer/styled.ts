@@ -41,6 +41,7 @@ const Footer = styled.footer`
   left: 3%;
   z-index: 9999;
   gap: 2rem;
+  cursor: none;
 `;
 
 interface ILink {
@@ -48,6 +49,7 @@ interface ILink {
 }
 
 const Link = styled.a<ILink>`
+  cursor: none;
   svg {
     animation: ${jump} 2s ease;
     animation-delay: ${({ animationDelay }) => animationDelay}s;
@@ -61,8 +63,12 @@ const Link = styled.a<ILink>`
       cursor: none;
     }
     :active {
+      cursor: none;
       animation: ${scale} 0.4s ease;
     }
+  }
+  :last-of-type {
+    scale: 1.1;
   }
 `;
 

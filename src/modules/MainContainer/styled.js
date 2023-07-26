@@ -8,18 +8,8 @@ const MainContainer = styled.div`
   gap: 1rem;
 `;
 
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  top: 2%;
-  left: 0;
-  position: fixed;
-`;
-
 const S = {
   MainContainer,
-  Header,
 };
+
 export default S;

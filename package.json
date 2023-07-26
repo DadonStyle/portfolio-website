@@ -11,9 +11,6 @@
   "dependencies": {
     "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.1.4",
-    "dot-env": "^0.0.1",
-    "dotenv-webpack": "^8.0.1",
-    "next": "^13.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.1",

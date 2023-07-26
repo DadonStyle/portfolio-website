@@ -35,7 +35,7 @@ const FirstPage = (props: TProps) => (
     <br />
     <S.TextWrapper>And welcome to my:</S.TextWrapper>
     <S.GlitchWrapper isGap={true}>
-      {'Interactive Website'.split(' ').map((item) => (
+      {'Interactive portfolio'.split(' ').map((item) => (
         <Glitch
           key={Math.random()}
           text={item}

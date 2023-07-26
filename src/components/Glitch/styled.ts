@@ -54,6 +54,7 @@ const StyledGlitch = styled.span<IStyledGlitch>`
   transform: ${({ rotateZ }) => `rotateZ(${rotateZ})`};
   perspective: 1000px;
   transform-style: preserve-3d;
+  user-select: none;
   ${({ isNoam }) => (isNoam ? animationHover : '')};
   color: ${(props) =>
     props.randomColor && props.isNoam ? props.randomColor : 'white'};
