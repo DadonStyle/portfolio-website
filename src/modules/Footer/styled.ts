@@ -1,17 +1,4 @@
-import { isMobile } from './../../App';
 import styled, { keyframes } from 'styled-components';
-
-const scale = keyframes`
-  0% {
-    scale: 1;
-  }
-  50% {
-    scale: 2.2;
-  }
-  100% {
-    scale: 2
-  }
-`;
 
 const jump = keyframes`
   0% {
@@ -67,7 +54,8 @@ const Link = styled.a<ILink>`
     }
     :active {
       cursor: ${({ theme }) => `${theme.cursor}`};
-      animation: ${scale} 0.4s ease;
+      scale: 0.8;
+      transition: all 0.3s ease-in-out;
     }
   }
   :last-of-type {
