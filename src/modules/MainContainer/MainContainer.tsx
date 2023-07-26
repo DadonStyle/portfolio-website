@@ -4,6 +4,7 @@ import Section from '../../components/Section/Section';
 import { componentsArr, IComponentsObj } from './helper';
 import NavMenu from '../../components/NavMenu/NavMenu';
 import { IBackground } from '../../App';
+import Footer from '../Footer/Footer';
 
 const MainContainer = ({ backgroundRef }: IBackground) => {
   const [scrollIndex, setScrollIndex] = useState<number | undefined>(undefined);
@@ -15,7 +16,6 @@ const MainContainer = ({ backgroundRef }: IBackground) => {
         setScrollIndex={setScrollIndex}
         scrollIndex={scrollIndex}
       />
-
       <S.Header>
         <div>Logo</div>
       </S.Header>
@@ -30,8 +30,7 @@ const MainContainer = ({ backgroundRef }: IBackground) => {
           {item.comp}
         </Section>
       ))}
-
-      <S.Footer>Footer</S.Footer>
+      <Footer />
     </S.MainContainer>
   );
 };

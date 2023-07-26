@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 const MainContainer = styled.div`
   display: flex;
@@ -18,19 +18,8 @@ const Header = styled.div`
   position: fixed;
 `;
 
-const Footer = styled.footer`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  width: 100%;
-  bottom: 2%;
-`;
-
 const S = {
   MainContainer,
   Header,
-  Footer,
 };
 export default S;

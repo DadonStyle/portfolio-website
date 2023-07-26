@@ -7,6 +7,7 @@ const ContactWrapper = styled.div`
   margin-bottom: 1rem;
   gap: 2rem;
   flex-direction: column;
+  width: 100%;
 `;
 
 const HeaderWrapper = styled.div`
@@ -23,6 +24,8 @@ const BodyWrapper = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 4;
+  width: 100%;
+  max-width: 600px;
 `;
 
 const FormContainer = styled.div`
@@ -37,7 +40,9 @@ const FormContainer = styled.div`
   background-size: 100% 100%;
   border-radius: 2rem;
   perspective: 1000px;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 800px;
 `;
 
 const moveRight = keyframes`
@@ -72,7 +77,8 @@ const Form = styled.form<IForm>`
   animation-delay: 1s;
   min-height: 400px;
   box-shadow: -0.2rem 0.2rem 0.2rem 0rem black;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
 `;
 
 const NameContainer = styled.div`
