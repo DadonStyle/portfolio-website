@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { isMobile } from '../App';
 
 const Cursor = styled.div`
   position: fixed;
@@ -23,13 +24,14 @@ const useCursor = () => {
   };
 
   useEffect(() => {
+    if (isMobile) return;
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
-  return <Cursor ref={cursorRef} />;
+  return isMobile ? <></> : <Cursor ref={cursorRef} />;
 };
 
 export default useCursor;

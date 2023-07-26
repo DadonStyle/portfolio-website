@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const FlipCardBigContainer = styled.div`
   display: flex;
+  flex-direction: ${({ theme }) => (theme.isMobile ? 'column' : 'row')};
   gap: 2rem;
 `;
 

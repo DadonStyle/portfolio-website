@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: ${({ theme }) => (theme.isMobile ? '' : '0 1rem')};
   justify-content: center;
   align-items: center;
   z-index: 4;
@@ -11,9 +11,10 @@ const Wrapper = styled.div`
 `;
 
 const JumpingWrapper = styled.div`
-  border-radius: 20px;
+  border-radius: ${({ theme }) => (theme.isMobile ? '' : '20px')};
   box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2.5px);
+  width: ${({ theme }) => (theme.isMobile ? '100%' : '')};
   border: 1px solid rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.05);
 `;

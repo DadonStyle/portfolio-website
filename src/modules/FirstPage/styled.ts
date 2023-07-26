@@ -33,7 +33,7 @@ const GlitchWrapper = styled.div<IGlitchWrapper>`
 `;
 
 const TextWrapper = styled.div`
-  font-size: 2rem;
+  font-size: ${({ theme }) => (theme.isMobile ? '1.5rem' : '2rem')};
   :hover {
     text-decoration: lavenderblush wavy underline;
     scale: 1.05;

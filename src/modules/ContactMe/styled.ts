@@ -25,7 +25,7 @@ const BodyWrapper = styled.div`
   align-items: center;
   z-index: 4;
   width: 100%;
-  max-width: 600px;
+  max-width: ${({ theme }) => (theme.isMobile ? '' : '600px')};
 `;
 
 const FormContainer = styled.div`
@@ -38,10 +38,9 @@ const FormContainer = styled.div`
   background: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689861026/IMG-8950_xpcuf8.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  border-radius: 2rem;
+  border-radius: ${({ theme }) => (theme.isMobile ? '' : '20px')};
   perspective: 1000px;
   width: 100%;
-  max-width: 600px;
   max-height: 800px;
 `;
 
@@ -62,13 +61,13 @@ const Form = styled.form<IForm>`
   justify-content: center;
   align-items: center;
   /* border: 1px solid white; */
-  border-radius: 2rem;
+  border-radius: ${({ theme }) => (theme.isMobile ? '' : '20px')};
   background: radial-gradient(
     circle at 24.1% 68.8%,
     rgb(50, 50, 50) 0%,
     rgb(0, 0, 0) 99.4%
   );
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   gap: 3rem;
   padding: 2rem;
   transition: animation 0.8s;
@@ -79,6 +78,7 @@ const Form = styled.form<IForm>`
   box-shadow: -0.2rem 0.2rem 0.2rem 0rem black;
   width: 100%;
   max-width: 600px;
+  box-sizing: border-box;
 `;
 
 const NameContainer = styled.div`
@@ -114,19 +114,20 @@ const LinkContainer = styled.div`
   width: fit-content;
   margin-bottom: 2rem;
   border: 2px solid white;
-  border-radius: 15px;
+  border-radius: 20px;
 `;
 
 const Input = styled.input`
   all: none;
   display: flex;
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   background-color: transparent;
   color: white;
-  border-radius: 2rem;
+  border-radius: 20px;
   padding: 1rem;
   width: 100%;
   border: 2px solid white;
+  box-sizing: border-box;
   :hover {
     border: 2px dotted white;
   }
@@ -134,9 +135,10 @@ const Input = styled.input`
 
 const Label = styled.label`
   display: flex;
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   font-size: 2rem;
   font-weight: 700;
+  box-sizing: border-box;
   width: 100%;
   color: rgba(255, 255, 255, 1);
   :hover {
@@ -146,14 +148,15 @@ const Label = styled.label`
 
 const Textarea = styled.textarea`
   display: flex;
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   background-color: transparent;
   color: white;
-  border-radius: 2rem;
+  border-radius: 20px;
   padding: 1rem;
   width: 100%;
   height: 200px;
   border: 2px solid white;
+  box-sizing: border-box;
   :hover {
     border: 2px dotted white;
   }
@@ -162,12 +165,13 @@ const Textarea = styled.textarea`
 const Link = styled.a`
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 1rem;
   color: white;
   z-index: 3;
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   opacity: 1;
   :hover {
     background-color: rgba(255, 255, 255, 0.2);

@@ -9,8 +9,8 @@ const Section = styled.section<ISection>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   gap: 1.5rem;
+  min-height: 100vh;
   // background-color: ${(props) => (props.isVisible ? 'red' : 'green')};
 `;
 

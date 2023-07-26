@@ -1,3 +1,4 @@
+import { isMobile } from './../../App';
 import styled, { keyframes } from 'styled-components';
 
 const scale = keyframes`
@@ -34,14 +35,16 @@ const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  position: ${({ theme }) => (theme.isMobile ? '' : 'fixed')};
   width: 100%;
-  max-width: 100px;
+  max-width: ${({ theme }) => (theme.isMobile ? '' : '100px')};
+  margin-top: ${({ theme }) => (theme.isMobile ? '-4rem' : '')};
+  margin-bottom: ${({ theme }) => (theme.isMobile ? '1rem' : '')};
   bottom: 3%;
-  left: 3%;
+  left: ${({ theme }) => (theme.isMobile ? '' : '3%')};
   z-index: 9999;
   gap: 2rem;
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
 `;
 
 interface ILink {
@@ -49,21 +52,21 @@ interface ILink {
 }
 
 const Link = styled.a<ILink>`
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   svg {
-    animation: ${jump} 2s ease;
+    animation: ${({ theme }) => (theme.isMobile ? '' : jump)} 2s ease;
     animation-delay: ${({ animationDelay }) => animationDelay}s;
     width: 32px;
     height: 32px;
     z-index: 9999;
-    cursor: none;
+    cursor: ${({ theme }) => `${theme.cursor}`};
     :hover {
       scale: 2;
       transition: all 0.4s ease-in-out;
-      cursor: none;
+      cursor: ${({ theme }) => `${theme.cursor}`};
     }
     :active {
-      cursor: none;
+      cursor: ${({ theme }) => `${theme.cursor}`};
       animation: ${scale} 0.4s ease;
     }
   }

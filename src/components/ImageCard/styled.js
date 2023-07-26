@@ -14,6 +14,7 @@ const ImageCardContainer = styled.div`
 `;
 
 const ImgContainer = styled.div`
+  display: ${({ theme }) => (theme.isMobile ? 'none' : '')};
   img {
     width: 500px;
     height: 500px;
@@ -31,6 +32,7 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border-bottom: 2px solid silver;
+  padding: ${({ theme }) => (theme.isMobile ? '0 1rem' : '')};
   position: relative;
   overflow: hidden;
   :first-child {
@@ -62,7 +64,7 @@ const TextInsideWrapper = styled.a`
   font-weight: 400;
   width: 100%;
   color: white;
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   :hover {
     text-decoration: underline;
     padding-left: 2rem;
@@ -70,7 +72,7 @@ const TextInsideWrapper = styled.a`
     transition: 0.3s ease-in-out;
     color: white;
     opacity: 0.6;
-    cursor: none;
+    cursor: ${({ theme }) => `${theme.cursor}`};
   }
 `;
 

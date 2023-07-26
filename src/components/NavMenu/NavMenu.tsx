@@ -1,6 +1,7 @@
 import S from './styled';
 import { componentsArr } from '../../modules/MainContainer/helper';
 import { useRef, useEffect, RefObject } from 'react';
+import { isMobile } from '../../App';
 
 interface INavMenu {
   backgroundRef: RefObject<HTMLDivElement>;
@@ -11,6 +12,7 @@ interface INavMenu {
 const NavMenu = (props: INavMenu) => {
   const myRef = useRef<HTMLDivElement>(null);
   const handleScrollMove = () => {
+    if (isMobile) return;
     const calcY =
       (window.scrollY / props.backgroundRef.current!.clientHeight) * 100; // calculate the new Y position on the page (precentage)
     myRef.current!.style.top = `${calcY}%`;
@@ -24,6 +26,8 @@ const NavMenu = (props: INavMenu) => {
       window.removeEventListener('scroll', handleScrollMove);
     };
   }, []);
+
+  if (isMobile) return;
 
   return (
     <S.NavWrapper>

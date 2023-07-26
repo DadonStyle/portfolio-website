@@ -48,13 +48,15 @@ const StyledGlitch = styled.span<IStyledGlitch>`
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
   font-size: ${(props) =>
-    props?.fontSize && !props.isHey ? `${props.fontSize}` : '2rem'};
+    props?.fontSize && !props.isHey && !props.theme.isMobile
+      ? `${props.fontSize}`
+      : '4rem'};
   line-height: 1;
-  white-space: nowrap;
   transform: ${({ rotateZ }) => `rotateZ(${rotateZ})`};
   perspective: 1000px;
   transform-style: preserve-3d;
   user-select: none;
+  text-align: center;
   ${({ isNoam }) => (isNoam ? animationHover : '')};
   color: ${(props) =>
     props.randomColor && props.isNoam ? props.randomColor : 'white'};

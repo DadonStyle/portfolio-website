@@ -1,13 +1,13 @@
 import S from './styled';
 import { svgs, randomId } from './helper';
 import FloatComponent from './FloatComponent';
-import { IBackground } from '../../App';
+import { IBackground, isMobile } from '../../App';
 
 const Background = ({ backgroundRef }: IBackground) => (
   <>
     <S.BackgroundImg id="backIMG" ref={backgroundRef} />
     <S.FloatContainer>
-      {[...Array(56).keys()].map((item) => (
+      {[...Array(isMobile ? 14 : 56).keys()].map((item) => (
         <FloatComponent
           key={Math.random()}
           backgroundRef={backgroundRef}

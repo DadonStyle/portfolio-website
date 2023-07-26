@@ -10,7 +10,7 @@ const HeaderWrapper = styled.div`
 const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 1rem;
+  padding: ${({ theme }) => (theme.isMobile ? '' : '0 1rem')};
   justify-content: center;
   align-items: center;
   z-index: 4;

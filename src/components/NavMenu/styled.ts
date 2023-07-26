@@ -11,7 +11,7 @@ const NavWrapper = styled.div`
   height: fit-content;
   width: fit-content;
   z-index: 999;
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(2.5px);
   border-top-left-radius: 20px;
@@ -34,7 +34,7 @@ const NavBtn = styled.div<INavBtn>`
   margin: 1rem;
   /* background-color: ${(props) =>
     props.selected === props.scrollId ? 'aqua' : 'white'}; */
-  cursor: none;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   :hover {
     box-shadow: 0px 0px 2px 4px rgba(255, 29, 88, 1);
     transition: 0.8s all ease-out;

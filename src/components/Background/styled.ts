@@ -59,6 +59,7 @@ const BackgroundImg = styled.div`
   height: 100%;
   overflow: hidden;
   z-index: 0;
+  cursor: ${({ theme }) => `${theme.cursor}`};
   &:after {
     animation: ${Grain} 10s steps(8) infinite;
     background-image: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689171910/noise_jmcjp6.png);
@@ -75,6 +76,7 @@ const BackgroundImg = styled.div`
 
 const AnimationWrapper = styled.div<IAnimationWrapper>`
   position: absolute;
+  cursor: ${({ theme }) => (theme.isMobile ? '' : 'none')};
   animation: ${({ floatAnimation }) => floatAnimation}
     ${50 + Math.floor(Math.random() * 50) + 's'} ease-in-out infinite;
   :hover {

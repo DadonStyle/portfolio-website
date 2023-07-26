@@ -7,6 +7,10 @@ import { ReactComponent as Float6 } from '../../assets/svg/float6.svg';
 import { ReactComponent as Float7 } from '../../assets/svg/float7.svg';
 import { keyframes } from 'styled-components';
 
+const precentageLeft = !!(Math.min(window.innerWidth, window.outerWidth) < 900)
+  ? 50
+  : 100;
+
 export const generateFloat = (
   top: number,
   left: number,
@@ -23,14 +27,14 @@ export const generateFloat = (
   }
   25% {
     rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'};
-    left: ${Math.floor(Math.random() * 100) + '%'};
+    left: ${Math.floor(Math.random() * precentageLeft) + '%'};
     opacity: ${Math.random()};
     transform: scale(${Math.floor(Math.random() * 3)});
   }
   50% {
     top: ${Math.floor(Math.random() * 100) + '%'};
     rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'};
-    left: ${Math.floor(Math.random() * 100) + '%'};
+    left: ${Math.floor(Math.random() * precentageLeft) + '%'};
     opacity: ${Math.random()};
     transform: scale(${Math.floor(Math.random() * 3)});
   }
@@ -43,7 +47,7 @@ export const generateFloat = (
   100% {
     top: ${Math.floor(Math.random() * 100) + '%'};
     rotate: ${20 + Math.floor(Math.random() * 1000) + 'deg'}; 
-    left: ${10 + Math.floor(Math.random() * 100) + '%'};
+    left: ${10 + Math.floor(Math.random() * precentageLeft) + '%'};
     opacity: 0;
     transform: scale(${Math.floor(Math.random() * 3)});
   }

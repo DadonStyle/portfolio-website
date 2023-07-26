@@ -5,7 +5,6 @@ import { componentsArr, IComponentsObj } from './helper';
 import NavMenu from '../../components/NavMenu/NavMenu';
 import { IBackground } from '../../App';
 import Footer from '../Footer/Footer';
-import Header from '../Header/Header';
 
 const MainContainer = ({ backgroundRef }: IBackground) => {
   const [scrollIndex, setScrollIndex] = useState<number | undefined>(undefined);
@@ -17,7 +16,6 @@ const MainContainer = ({ backgroundRef }: IBackground) => {
         setScrollIndex={setScrollIndex}
         scrollIndex={scrollIndex}
       />
-      <Header />
       {componentsArr.map((item: IComponentsObj, index) => (
         <Section
           setScrollIndex={setScrollIndex}

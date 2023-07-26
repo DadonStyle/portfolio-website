@@ -6,7 +6,7 @@ import S from './styled';
 const Projects = () => (
   <>
     <S.HeaderWrapper>
-      <Glitch text={'Projects - Highlights'} />
+      <Glitch text={'Projects Highlights'} />
     </S.HeaderWrapper>
     <S.BodyWrapper>
       <ImageCard textsImgsArr={textsImgsArr} />

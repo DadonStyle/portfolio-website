@@ -1,6 +1,7 @@
 import { useState, PropsWithChildren, ReactNode, useRef } from 'react';
 import S from './styled';
 import { generateFloat } from './helper';
+import { isMobile } from '../../App';
 
 interface IFloatComponent {
   svg: ReactNode;
@@ -25,6 +26,7 @@ const FloatComponent = (props: PropsWithChildren<IFloatComponent>) => {
 
   // put the correct event here !
   const handleOnDrag = (e: any) => {
+    if (isMobile) return;
     e.preventDefault();
     const ref = dragRef.current?.getBoundingClientRect();
     if (!ref) return;

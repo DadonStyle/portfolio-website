@@ -2,10 +2,9 @@ import styled, { css, keyframes } from 'styled-components';
 
 const JumpRowContainer = styled.span`
   display: flex;
-  justify-content: center;
+  justify-content: ${({ theme }) => (theme.isMobile ? 'left' : 'center')};
   align-items: center;
   flex-wrap: wrap;
-  width: 100%;
   gap: 8px;
   text-size-adjust: none;
   padding-right: 2rem;
@@ -19,7 +18,7 @@ const JumpWord = styled.span`
   :hover {
     color: gold;
     transform: scale(1.2);
-    cursor: none;
+    cursor: ${({ theme }) => `${theme.cursor}`};
   }
 `;
 

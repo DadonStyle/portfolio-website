@@ -5,7 +5,9 @@ const MainContainer = styled.div`
   flex-direction: column;
   overflow: hidden;
   z-index: 0;
-  gap: 1rem;
+  gap: ${({ theme }) => (theme.isMobile ? '6rem' : '1rem')};
+  cursor: ${({ theme }) => `${theme.cursor}`};
+  padding-top: ${({ theme }) => (theme.isMobile ? '2rem' : '')};
 `;
 
 const S = {
