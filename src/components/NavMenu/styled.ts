@@ -36,8 +36,9 @@ const NavBtn = styled.div<INavBtn>`
     props.selected === props.scrollId ? 'aqua' : 'white'}; */
   cursor: ${({ theme }) => `${theme.cursor}`};
   :hover {
-    box-shadow: 0px 0px 2px 4px rgba(255, 29, 88, 1);
-    transition: 0.8s all ease-out;
+    box-shadow: 0px 0px 2px 4px rgba(255, 29, 88, 0.8);
+    background-color: rgba(255, 29, 88, 0.2);
+    transition: 0.3s all ease-out;
   }
 `;
 
