@@ -1,11 +1,3 @@
-todo:
-
-- fixed invesible footer with icons on the left (contact ME when visible large github icon)
-- header, add changing logo
-- mobile design
-- upload to vercel
-
-
 todo after release: 
 - change navMenu to radio button instead of div
 - contact me and projects img, moving on hover by cursor position
