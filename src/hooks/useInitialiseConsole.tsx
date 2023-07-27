@@ -12,12 +12,16 @@ const useInitialiseConsole = () => {
       'color:brown; font-size: medium;'
     );
     console.log(
-      '%c This website uses 0 dependencies (not including core), not releated on any extra lib',
-      'color:brown; font-size: medium;'
+      '%c Note: This website uses 0 dependencies (not including core), not releated on any extra lib',
+      'color:green; font-size: medium;'
     );
     console.log(
       "%c If you are curious, here's the github link: https://github.com/DadonStyle/portfolio-website/tree/master",
       'color:brown; font-size: medium;'
+    );
+    console.log(
+      '%c Mobile design view, dont forget to refresh :)',
+      'color:green; font-size: medium;'
     );
   }, []);
 };
