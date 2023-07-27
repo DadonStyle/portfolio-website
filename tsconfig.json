@@ -25,5 +25,5 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["vite/client", "styled-components", "@types/styled-components"]
   },
-  "include": ["src", "svg.d.ts", "main.js"]
+  "include": ["src", "svg.d.ts", "main.jsx"]
 }
