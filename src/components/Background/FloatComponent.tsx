@@ -2,6 +2,7 @@ import { useState, PropsWithChildren, ReactNode, useRef } from 'react';
 import S from './styled';
 import { generateFloat } from './helper';
 import { isMobile } from '../../App';
+import touch from '../../assets/img/touch.png';
 
 interface IFloatComponent {
   svg: ReactNode;
@@ -48,6 +49,7 @@ const FloatComponent = (props: PropsWithChildren<IFloatComponent>) => {
       ref={dragRef}
     >
       {props.svg}
+      <S.Img src={touch} alt="" />
     </S.AnimationWrapper>
   );
 };

@@ -4,6 +4,42 @@ interface IAnimationWrapper {
   floatAnimation: any;
 }
 
+const flicker = keyframes`
+  0% {
+    opacity: 0.9;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 1;
+  }  
+  60% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+
 const FloatContainer = styled.div`
   svg {
     position: absolute;
@@ -85,10 +121,17 @@ const AnimationWrapper = styled.div<IAnimationWrapper>`
   z-index: 2;
 `;
 
+const Img = styled.img`
+  animation: ${flicker} 15s ease-in-out forwards;
+  width: 30px;
+  height: 30px;
+`;
+
 const S = {
   FloatContainer,
   AnimationWrapper,
   BackgroundImg,
+  Img,
 };
 
 export default S;
