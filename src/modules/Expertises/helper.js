@@ -19,3 +19,30 @@ export const imgArr = [
     backImg: TsImg,
   },
 ];
+
+export const imgArrMobile = [
+  {
+    frontImg: reactImg,
+    backImg: reactImg,
+  },
+  {
+    frontImg: nodeJsImg,
+    backImg: nodeJsImg,
+  },
+  {
+    frontImg: cssImg,
+    backImg: cssImg,
+  },
+  {
+    frontImg: htmlImg,
+    backImg: htmlImg,
+  },
+  {
+    frontImg: JsImg,
+    backImg: JsImg,
+  },
+  {
+    frontImg: TsImg,
+    backImg: TsImg,
+  },
+];

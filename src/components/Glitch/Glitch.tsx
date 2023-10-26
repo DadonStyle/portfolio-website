@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import S from './styled';
+import { isMobile } from '../../App';
 
 export interface IGlitchProps {
   text: string;
@@ -28,7 +29,7 @@ const Glitch = (props: PropsWithChildren<IGlitchProps>) => {
       <S.StyledGlitch
         text={props.text}
         randomColor={randomColor}
-        fontSize={props.isRandomFont ? `${randomFont}rem` : '4rem'}
+        fontSize={props.isRandomFont && !isMobile ? `${randomFont}rem` : '3rem'}
         rotateZ={props.isRandomRotateZ ? `${randomDeg}deg` : '0deg'}
         isNoam={props.isNoam ?? false}
         isHey={props.isHey ?? false}

@@ -27,8 +27,10 @@ const FlipCardInner = styled.div`
 const FlipCardContainer = styled.div`
   width: 100%;
   height: 100%;
-  &:hover ${FlipCardInner} {
-    transform: rotateY(180deg);
+  @media (hover: hover) {
+    &:hover ${FlipCardInner} {
+      transform: rotateY(180deg);
+    }
   }
 `;
 

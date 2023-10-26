@@ -47,10 +47,7 @@ interface IStyledGlitch {
 const StyledGlitch = styled.span<IStyledGlitch>`
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
-  font-size: ${(props) =>
-    props?.fontSize && !props.isHey && !props.theme.isMobile
-      ? `${props.fontSize}`
-      : '4rem'};
+  font-size: ${(props) => `${props.fontSize}`};
   line-height: 1;
   transform: ${({ rotateZ }) => `rotateZ(${rotateZ})`};
   perspective: 1000px;

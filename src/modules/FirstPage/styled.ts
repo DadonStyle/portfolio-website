@@ -1,3 +1,4 @@
+import { isMobile } from './../../App';
 import styled, { keyframes } from 'styled-components';
 
 export const slideInFromLeft = keyframes`
@@ -16,10 +17,13 @@ const Wrapper = styled.div<IWrapper>`
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
-  justify-content: center;
+  justify-content: ${({ theme }) =>
+    theme.isMobile ? 'space-between' : 'center'};
   align-items: center;
   z-index: 4;
   animation: ${(props) => (props.isVisible ? slideInFromLeft : '')} 3s ease;
+  min-height: 400px;
+  gap: 2rem;
 `;
 
 interface IGlitchWrapper {

@@ -49,7 +49,7 @@ const FloatComponent = (props: PropsWithChildren<IFloatComponent>) => {
       ref={dragRef}
     >
       {props.svg}
-      <S.Img src={touch} alt="" />
+      <S.Img src={touch} alt='' />
     </S.AnimationWrapper>
   );
 };

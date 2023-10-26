@@ -41,7 +41,7 @@ const FormContainer = styled.div`
   border-radius: ${({ theme }) => (theme.isMobile ? '' : '20px')};
   perspective: 1000px;
   width: 100%;
-  max-height: 800px;
+  max-height: ${({ theme }) => (theme.isMobile ? '700px' : '800px')};
 `;
 
 const moveRight = keyframes`

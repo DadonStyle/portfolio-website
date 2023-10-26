@@ -8,32 +8,30 @@ type TProps = {
 
 const FirstPage = (props: TProps) => (
   <S.Wrapper isVisible={props.isVisible!}>
-    <S.GlitchWrapper isGap={true}>
-      {'Hey, I am Noam'.split(' ').map((item) => (
-        <Glitch
-          key={Math.random()}
-          text={item}
-          isRandomFont={true}
-          isRandomRotateZ={true}
-          isNoam={item === 'Noam'}
-        />
-      ))}
-    </S.GlitchWrapper>
-    <S.GlitchWrapper>
-      {'Frontend Developer'.split(' ').map((item) => (
-        <Glitch
-          key={Math.random()}
-          text={item}
-          isRandomFont={true}
-          isRandomRotateZ={true}
-        />
-      ))}
-    </S.GlitchWrapper>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <div>
+      <S.GlitchWrapper isGap={true}>
+        {'Hey, I am Noam'.split(' ').map((item) => (
+          <Glitch
+            key={Math.random()}
+            text={item}
+            isRandomFont={true}
+            isRandomRotateZ={true}
+            isNoam={item === 'Noam'}
+          />
+        ))}
+      </S.GlitchWrapper>
+      <S.GlitchWrapper>
+        {'Frontend Developer'.split(' ').map((item) => (
+          <Glitch
+            key={Math.random()}
+            text={item}
+            isRandomFont={true}
+            isRandomRotateZ={true}
+          />
+        ))}
+      </S.GlitchWrapper>
+    </div>
+
     {isMobile ? (
       <>
         <S.TextWrapper>Welcome to my Website!</S.TextWrapper>
