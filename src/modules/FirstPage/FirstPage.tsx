@@ -36,10 +36,7 @@ const FirstPage = (props: TProps) => (
     <br />
     {isMobile ? (
       <>
-        <S.TextWrapper>And welcome to my Website!</S.TextWrapper>
-        <S.TextWrapper>
-          Note: to view everything please use a computer :)
-        </S.TextWrapper>
+        <S.TextWrapper>Welcome to my Website!</S.TextWrapper>
       </>
     ) : (
       <>

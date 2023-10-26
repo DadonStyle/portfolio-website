@@ -7,7 +7,7 @@
   "scripts": {
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
-    "start": "vite",
+    "start": "vite --host",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
