@@ -1,6 +1,6 @@
 import FirstPage from '../FirstPage/FirstPage';
 import Projects from '../Projects/Projects';
-import Expertises from '../Expertises/Expertises';
+import Expertise from '../Expertises/Expertises';
 import ContactMe from '../ContactMe/ContactMe';
 import AboutMe from '../AboutMe/AboutMe';
 import { ReactElement } from 'react';
@@ -20,8 +20,8 @@ export const componentsArr: Array<IComponentsObj> = [
     comp: <Projects />,
   },
   {
-    name: Expertises.name,
-    comp: <Expertises />,
+    name: Expertise.name,
+    comp: <Expertise />,
   },
   {
     name: AboutMe.name,

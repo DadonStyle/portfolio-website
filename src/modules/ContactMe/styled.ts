@@ -35,21 +35,21 @@ const FormContainer = styled.div`
   align-items: center;
   height: fit-content;
   width: fit-content;
-  background: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689861026/IMG-8950_xpcuf8.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+  /* background: url(https://res.cloudinary.com/dgkl4mfhe/image/upload/v1689861026/IMG-8950_xpcuf8.jpg); */
+  /* background-repeat: no-repeat;
+  background-size: 100% 100%; */
   border-radius: ${({ theme }) => (theme.isMobile ? '' : '20px')};
-  perspective: 1000px;
+  /* perspective: 1000px; */
   width: 100%;
   max-height: ${({ theme }) => (theme.isMobile ? '700px' : '800px')};
 `;
 
-const moveRight = keyframes`
-  0.1%  { transform: translateX(0) rotateY(0deg); box-shadow: 0rem 0rem rgba(0, 0, 0);}
-  20%  { transform: translateX(32rem) rotateY(20deg); box-shadow: 0rem 0rem rgba(0, 0, 0); }
-  70%   { transform: translateX(32rem) rotateY(20deg); box-shadow: 0.1rem 0.1rem rgba(0, 0, 0); }
-  100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: -0.2rem 0.2rem rgba(0, 0, 0);  }
-`;
+// const moveRight = keyframes`
+//   0.1%  { transform: translateX(0) rotateY(0deg); box-shadow: 0rem 0rem rgba(0, 0, 0);}
+//   20%  { transform: translateX(32rem) rotateY(20deg); box-shadow: 0rem 0rem rgba(0, 0, 0); }
+//   70%   { transform: translateX(32rem) rotateY(20deg); box-shadow: 0.1rem 0.1rem rgba(0, 0, 0); }
+//   100%  { transform: translateX(0rem) rotateY(0deg); box-shadow: -0.2rem 0.2rem rgba(0, 0, 0);  }
+// `;
 
 interface IForm {
   isVisible: boolean;
@@ -70,16 +70,19 @@ const Form = styled.form<IForm>`
   cursor: ${({ theme }) => `${theme.cursor}`};
   gap: 3rem;
   padding: 2rem;
-  transition: animation 0.8s;
-  transform-style: preserve-3d;
-  animation: ${(props) => (props.isVisible ? moveRight : '')} 6s ease;
-  animation-delay: 1s;
   min-height: 400px;
   box-shadow: -0.2rem 0.2rem 0.2rem 0rem black;
   width: 100%;
   max-width: 600px;
   box-sizing: border-box;
 `;
+/*
+  ^
+  transition: animation 0.8s;
+  transform-style: preserve-3d;
+  animation: ${(props) => (props.isVisible ? moveRight : '')} 6s ease;
+  animation-delay: 1s;
+  */
 
 const NameContainer = styled.div`
   display: flex;

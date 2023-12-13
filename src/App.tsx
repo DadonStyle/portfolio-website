@@ -2,7 +2,7 @@ import { RefObject, useRef, useMemo } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Background from './components/Background/Background';
 import useCursor from './hooks/useCursor';
-import useInitialiseConsole from './hooks/useInitialiseConsole';
+import useInitializeConsole from './hooks/useInitialiseConsole';
 import MainContainer from './modules/MainContainer/MainContainer';
 import useScrollTopOnRefresh from './hooks/useScrollTopOnRefresh';
 
@@ -33,7 +33,7 @@ declare module 'styled-components' {
 const App = () => {
   const cursor = useCursor();
   const backgroundRef = useRef<HTMLDivElement>(null);
-  useInitialiseConsole();
+  useInitializeConsole();
   useScrollTopOnRefresh();
 
   const theme = useMemo(

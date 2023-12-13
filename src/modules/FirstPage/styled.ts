@@ -1,4 +1,3 @@
-import { isMobile } from './../../App';
 import styled, { keyframes } from 'styled-components';
 
 export const slideInFromLeft = keyframes`

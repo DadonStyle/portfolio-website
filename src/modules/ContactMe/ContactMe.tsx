@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import Glitch from '../../components/Glitch/Glitch';
 import S from './styled';
 
@@ -7,17 +7,19 @@ type TProps = {
 };
 
 const ContactMe = (props: TProps) => {
-  const nameRef = useRef<HTMLInputElement>(null);
-  const subjectRef = useRef<HTMLInputElement>(null);
-  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+  const [name, setName] = useState<string>('');
+  const [subject, setSubject] = useState<string>('');
+  const [textArea, setTextArea] = useState<string>('');
 
-  const [name, setName] = useState<string | undefined>('');
-  const [subject, setSubject] = useState<string | undefined>('');
-  const [textArea, setTextArea] = useState<string | undefined>('');
-
-  const handleNameChange = () => setName(nameRef.current?.value);
-  const handleSubjectChange = () => setSubject(subjectRef.current?.value);
-  const handleTextAreaChange = () => setTextArea(textAreaRef.current?.value);
+  const handleNameChange = (e: {
+    currentTarget: { value: SetStateAction<string> };
+  }) => setName(e.currentTarget.value);
+  const handleSubjectChange = (e: {
+    currentTarget: { value: SetStateAction<string> };
+  }) => setSubject(e.currentTarget.value);
+  const handleTextAreaChange = (e: {
+    currentTarget: { value: SetStateAction<string> };
+  }) => setTextArea(e.currentTarget.value);
 
   return (
     <S.ContactWrapper>
@@ -29,26 +31,20 @@ const ContactMe = (props: TProps) => {
           <S.Form isVisible={props.isVisible!}>
             <S.NameContainer>
               <S.Label>Name</S.Label>
-              <S.Input
-                ref={nameRef}
-                onChange={handleNameChange}
-                placeholder="name"
-              />
+              <S.Input onChange={handleNameChange} placeholder='name' />
             </S.NameContainer>
             <S.SubjectContainer>
               <S.Label>Subject</S.Label>
               <S.Input
-                ref={subjectRef}
                 onChange={handleSubjectChange}
-                placeholder="email subject"
+                placeholder='email subject'
               />
             </S.SubjectContainer>
             <S.MessageContainer>
               <S.Label>Message</S.Label>
               <S.Textarea
-                ref={textAreaRef}
                 onChange={handleTextAreaChange}
-                placeholder="Let me know what do you think!"
+                placeholder='Let me know what do you think!'
               />
             </S.MessageContainer>
             <S.LinkContainer>

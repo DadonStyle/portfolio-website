@@ -32,26 +32,7 @@ const FirstPage = (props: TProps) => (
       </S.GlitchWrapper>
     </div>
 
-    {isMobile ? (
-      <>
-        <S.TextWrapper>Welcome to my Website!</S.TextWrapper>
-      </>
-    ) : (
-      <>
-        <S.TextWrapper>And welcome to my:</S.TextWrapper>
-        <S.GlitchWrapper isGap={true}>
-          {'Interactive portfolio'.split(' ').map((item) => (
-            <Glitch
-              key={Math.random()}
-              text={item}
-              isRandomFont={false}
-              isRandomRotateZ={true}
-              isNoam={item === 'Noam'}
-            />
-          ))}
-        </S.GlitchWrapper>
-      </>
-    )}
+    <S.TextWrapper>Welcome to my Website!</S.TextWrapper>
   </S.Wrapper>
 );
 export default FirstPage;

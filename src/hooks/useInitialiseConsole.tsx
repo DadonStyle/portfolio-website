@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useInitialiseConsole = () => {
+const useInitializeConsole = () => {
   useEffect(() => {
     console.log(
       "%c,-.___,-.\r \n\\_/_ _\\_/\r\n  )O_O(\r\n { (_) }\r\n  `-^-'",
@@ -12,18 +12,14 @@ const useInitialiseConsole = () => {
       'color:brown; font-size: medium;'
     );
     console.log(
-      '%c Note: This website uses 0 dependencies (not including core), not releated on any extra lib',
+      '%c Note: This website uses 0 dependencies (not including core), not relying on any extra lib',
       'color:green; font-size: medium;'
     );
     console.log(
       "%c If you are curious, here's the github link: https://github.com/DadonStyle/portfolio-website/tree/master",
       'color:brown; font-size: medium;'
     );
-    console.log(
-      '%c Mobile design view, dont forget to refresh :)',
-      'color:green; font-size: medium;'
-    );
   }, []);
 };
 
-export default useInitialiseConsole;
+export default useInitializeConsole;

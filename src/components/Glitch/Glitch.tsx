@@ -25,7 +25,7 @@ const Glitch = (props: PropsWithChildren<IGlitchProps>) => {
   const randomDeg = getRandomDeg();
 
   return (
-    <S.GlitchContainer>
+    <S.GlitchContainer draggable='false'>
       <S.StyledGlitch
         text={props.text}
         randomColor={randomColor}

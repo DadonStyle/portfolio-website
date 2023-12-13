@@ -5,9 +5,9 @@ import { IBackground, isMobile } from '../../App';
 
 const Background = ({ backgroundRef }: IBackground) => (
   <>
-    <S.BackgroundImg id="backIMG" ref={backgroundRef} />
+    <S.BackgroundImg id='backIMG' ref={backgroundRef} />
     <S.FloatContainer>
-      {[...Array(isMobile ? 14 : 56).keys()].map((item) => (
+      {[...Array(isMobile ? 14 : 28).keys()].map((item) => (
         <FloatComponent
           key={Math.random()}
           backgroundRef={backgroundRef}
