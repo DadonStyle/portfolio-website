@@ -1,6 +1,5 @@
 import S from './styled';
 import Glitch from '../../components/Glitch/Glitch';
-import { isMobile } from '../../App';
 
 type TProps = {
   isVisible?: boolean;
