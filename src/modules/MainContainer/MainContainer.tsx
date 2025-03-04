@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import S from './styled';
-import Section from '../../components/Section/Section';
-import { componentsArr, IComponentsObj } from './helper';
-import NavMenu from '../../components/NavMenu/NavMenu';
-import { IBackground } from '../../App';
-import Footer from '../Footer/Footer';
+import { useState } from "react";
+import S from "./styled";
+import Section from "../../components/Section/Section";
+import { componentsArr, IComponentsObj } from "./helper";
+import NavMenu from "../../components/NavMenu/NavMenu";
+import { IBackground } from "../../App";
+import Footer from "../Footer/Footer";
 
 const MainContainer = ({ backgroundRef }: IBackground) => {
   const [scrollIndex, setScrollIndex] = useState<number | undefined>(undefined);

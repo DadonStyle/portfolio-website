@@ -1,8 +1,7 @@
-import S from './styled';
-import { ReactComponent as GithubSVG } from '../../assets/svg/github-mark.svg';
-import { ReactComponent as LinkdeinSVG } from '../../assets/svg/linkedin-icon.svg';
-import { ReactComponent as CVicon } from '../../assets/svg/CV-icon.svg';
-import CVpdf from '../../assets/Full-Stack Noam Dadon CV.pdf';
+import S from "./styled";
+import { ReactComponent as GithubSVG } from "../../assets/svg/github-mark.svg";
+import { ReactComponent as LinkdeinSVG } from "../../assets/svg/linkedin-icon.svg";
+import { ReactComponent as CVicon } from "../../assets/svg/CV-icon.svg";
 
 const Footer = () => (
   <S.Footer>
@@ -20,7 +19,11 @@ const Footer = () => (
     >
       <GithubSVG />
     </S.Link>
-    <S.Link animationDelay={0.5} href={CVpdf} target="_blank">
+    <S.Link
+      animationDelay={0.5}
+      href="https://drive.google.com/file/d/1SCJC50C2obGHecFQK-61QxuzFjBKrcLh/view?usp=sharing"
+      target="_blank"
+    >
       <CVicon />
     </S.Link>
   </S.Footer>

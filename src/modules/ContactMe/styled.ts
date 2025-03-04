@@ -145,7 +145,7 @@ const Label = styled.label`
   width: 100%;
   color: rgba(255, 255, 255, 1);
   :hover {
-    text-decoration: lavenderblush wavy underline;
+    opacity: 0.8;
   }
 `;
 
