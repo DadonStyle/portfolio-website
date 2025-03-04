@@ -7,7 +7,7 @@ const Footer = () => (
   <S.Footer>
     <S.Link
       animationDelay={0}
-      href="https://www.linkedin.com/in/noam-dadon/"
+      href="https://www.linkedin.com/in/noam-react/"
       target="_blank"
     >
       <LinkdeinSVG />
