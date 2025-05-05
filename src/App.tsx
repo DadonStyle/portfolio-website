@@ -1,4 +1,4 @@
-import { RefObject, useRef, useMemo } from "react";
+import { RefObject, useRef } from "react";
 import { ThemeProvider } from "styled-components";
 import Background from "./components/Background/Background";
 import useCursor from "./hooks/useCursor";
