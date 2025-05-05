@@ -22,7 +22,7 @@ type MyTheme = {
   colors: {
     primary: string;
     secondary: string;
-    main: string; // Add this property
+    main: string;
   };
 };
 
