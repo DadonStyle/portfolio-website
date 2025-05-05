@@ -1,6 +1,6 @@
-import { ReactElement, cloneElement, useRef, useEffect } from 'react';
-import S from './styled';
-import useObserver from '../../hooks/useObserver';
+import { ReactElement, cloneElement, useRef, useEffect } from "react";
+import S from "./styled";
+import useObserver from "../../hooks/useObserver";
 
 type TProps = {
   children: ReactElement;

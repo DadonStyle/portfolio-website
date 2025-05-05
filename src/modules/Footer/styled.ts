@@ -22,15 +22,15 @@ const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: ${({ theme }) => (theme.isMobile ? '' : 'fixed')};
+  position: ${({ theme }) => (theme.isMobile ? "relative" : "fixed")};
   width: 100%;
-  max-width: ${({ theme }) => (theme.isMobile ? '' : '100px')};
-  margin-top: ${({ theme }) => (theme.isMobile ? '-4rem' : '')};
-  margin-bottom: ${({ theme }) => (theme.isMobile ? '1rem' : '')};
-  bottom: 3%;
-  left: ${({ theme }) => (theme.isMobile ? '' : '3%')};
+  max-width: ${({ theme }) => (theme.isMobile ? "100%" : "100px")};
+  margin-top: ${({ theme }) => (theme.isMobile ? "1rem" : "-4rem")};
+  margin-bottom: ${({ theme }) => (theme.isMobile ? "1rem" : "")};
+  bottom: ${({ theme }) => (theme.isMobile ? "" : "3%")};
+  left: ${({ theme }) => (theme.isMobile ? "" : "3%")};
   z-index: 9999;
-  gap: 2rem;
+  gap: ${({ theme }) => (theme.isMobile ? "1rem" : "2rem")};
   cursor: ${({ theme }) => `${theme.cursor}`};
 `;
 

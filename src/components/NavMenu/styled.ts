@@ -5,17 +5,21 @@ const NavWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  top: 40%;
-  right: 0;
+  position: ${({ theme }) => (theme.isMobile ? "relative" : "fixed")};
+  top: ${({ theme }) => (theme.isMobile ? "0" : "40%")};
+  right: ${({ theme }) => (theme.isMobile ? "0" : "0")};
   height: fit-content;
   width: fit-content;
   z-index: 999;
   cursor: ${({ theme }) => `${theme.cursor}`};
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2.5px);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  background: ${({ theme }) =>
+    theme.isMobile ? "transparent" : "rgba(255, 255, 255, 0.1)"};
+  backdrop-filter: ${({ theme }) =>
+    theme.isMobile ? "none" : "blur(2.5px)"};
+  border-top-left-radius: ${({ theme }) =>
+    theme.isMobile ? "0" : "20px"};
+  border-bottom-left-radius: ${({ theme }) =>
+    theme.isMobile ? "0" : "20px"};
 `;
 
 interface INavBtn {

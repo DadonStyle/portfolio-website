@@ -17,12 +17,12 @@ const Wrapper = styled.div<IWrapper>`
   flex-direction: column;
   padding: 0 1rem;
   justify-content: ${({ theme }) =>
-    theme.isMobile ? 'space-between' : 'center'};
+    theme.isMobile ? "space-between" : "center"};
   align-items: center;
   z-index: 4;
-  animation: ${(props) => (props.isVisible ? slideInFromLeft : '')} 3s ease;
-  min-height: 400px;
-  gap: 2rem;
+  animation: ${(props) => (props.isVisible ? slideInFromLeft : "")} 3s ease;
+  min-height: ${({ theme }) => (theme.isMobile ? "300px" : "400px")};
+  gap: ${({ theme }) => (theme.isMobile ? "1rem" : "2rem")};
 `;
 
 interface IGlitchWrapper {
@@ -38,16 +38,26 @@ const GlitchWrapper = styled.div<IGlitchWrapper>`
 const TextWrapper = styled.div`
   font-size: ${({ theme }) => (theme.isMobile ? '1.5rem' : '2rem')};
   :hover {
-    text-decoration: lavenderblush wavy underline;
     scale: 1.05;
     transition: all 0.5s ease-in-out;
   }
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 2rem 0;
 `;
 
 const S = {
   Wrapper,
   GlitchWrapper,
   TextWrapper,
+  TitleWrapper,
 };
 
 export default S;

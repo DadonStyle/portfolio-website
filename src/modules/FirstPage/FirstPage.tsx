@@ -7,7 +7,7 @@ type TProps = {
 
 const FirstPage = (props: TProps) => (
   <S.Wrapper isVisible={props.isVisible!}>
-    <div>
+    <S.TitleWrapper>
       <S.GlitchWrapper isGap={true}>
         {"Hey, I am Noam".split(" ").map((item) => (
           <Glitch
@@ -20,7 +20,7 @@ const FirstPage = (props: TProps) => (
         ))}
       </S.GlitchWrapper>
       <S.GlitchWrapper>
-        {"Frontend Developer".split(" ").map((item) => (
+        {"Web Developer".split(" ").map((item) => (
           <Glitch
             key={Math.random()}
             text={item}
@@ -29,7 +29,14 @@ const FirstPage = (props: TProps) => (
           />
         ))}
       </S.GlitchWrapper>
-    </div>
+    </S.TitleWrapper>
+    <S.TextWrapper>
+      <Glitch
+        text={"Please interact and explore my (unfinished) portfolio"}
+        isRandomFont={true}
+        isRandomRotateZ={true}
+      />
+    </S.TextWrapper>
   </S.Wrapper>
 );
 export default FirstPage;

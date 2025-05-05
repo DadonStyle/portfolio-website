@@ -11,7 +11,7 @@ const Section = styled.section<ISection>`
   align-items: center;
   gap: 1.5rem;
   min-height: 100vh;
-  // background-color: ${(props) => (props.isVisible ? 'red' : 'green')};
+  width: 100%;
 `;
 
 const S = {
