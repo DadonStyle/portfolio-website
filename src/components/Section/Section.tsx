@@ -16,7 +16,7 @@ const Section = (props: TProps) => {
   useEffect(() => {
     if (props.scrollIndex === props.scrollId) {
       myRef.current?.scrollIntoView();
-      props.setScrollIndex(undefined);
+      // props.setScrollIndex(undefined);
     }
   }, [props.scrollIndex]);
 

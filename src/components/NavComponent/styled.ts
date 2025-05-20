@@ -23,7 +23,7 @@ const NavWrapper = styled.div`
 `;
 
 interface INavBtn {
-  selected: number | undefined;
+  selected: boolean;
   scrollId: number | undefined;
 }
 
@@ -36,12 +36,12 @@ const NavBtn = styled.div<INavBtn>`
   border: 1px solid black;
   box-shadow: 0px 0px 20px 1px black;
   margin: 1rem;
-  /* background-color: ${(props) =>
-    props.selected === props.scrollId ? 'aqua' : 'white'}; */
+  background-color: ${(props) =>
+    props.selected ? 'rgba(255, 29, 88, 0.2);' : ''};
   cursor: ${({ theme }) => `${theme.cursor}`};
   :hover {
-    box-shadow: 0px 0px 2px 4px rgba(255, 29, 88, 0.8);
-    background-color: rgba(255, 29, 88, 0.2);
+    box-shadow: 0px 0px 2px 4px rgba(7, 7, 7, 0.8);
+    background-color: rgba(192, 187, 188, 0.2);
     transition: 0.3s all ease-out;
   }
 `;
@@ -54,6 +54,8 @@ const MovingCurrentPage = styled.div`
   background-color: rgba(255, 29, 88, 1);
   margin-top: 1rem;
   top: 0;
+  z-index: 9999;
+  transition: top 0.5s ease-in-out;
 `;
 
 const S = {

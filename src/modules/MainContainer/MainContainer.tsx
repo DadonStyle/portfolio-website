@@ -2,7 +2,7 @@ import { useState } from "react";
 import S from "./styled";
 import Section from "../../components/Section/Section";
 import { componentsArr, IComponentsObj } from "./helper";
-import NavMenu from "../../components/NavMenu/NavMenu";
+import NavComponent from "../../components/NavComponent/NavComponent";
 import { IBackground } from "../../App";
 import Footer from "../Footer/Footer";
 
@@ -11,7 +11,7 @@ const MainContainer = ({ backgroundRef }: IBackground) => {
 
   return (
     <S.MainContainer>
-      <NavMenu
+      <NavComponent
         backgroundRef={backgroundRef}
         setScrollIndex={setScrollIndex}
         scrollIndex={scrollIndex}
