@@ -32,7 +32,7 @@ const FirstPage = (props: TProps) => (
     </S.TitleWrapper>
     <S.TextWrapper>
       <Glitch
-        text={"Please interact and explore my (unfinished) portfolio"}
+        text={"Interact and explore"}
         isRandomFont={true}
         isRandomRotateZ={true}
       />
